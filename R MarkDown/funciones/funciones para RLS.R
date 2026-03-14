@@ -150,6 +150,52 @@ f_particionar_datos <- function(datos, proporcion_entrenamiento = 0.7) {
 }
 
 
+f_diagrama_dispersion_tendencia <- function(modelo, datos){
+  
+  library(ggplot2)
+  
+  #----------------------------------------------------------
+  # La función recibe el modelo y los datos de entrenamiento
+  # Extraer los nombres de las variables del modelo
+  # Calcular correlación de Pearson
+  # Construir gráfico de dispersión con línea de tendencia
+  
+  formula_modelo <- formula(modelo)
+  
+  variable_y <- all.vars(formula_modelo)[1]
+  variable_x <- all.vars(formula_modelo)[2]
+  
+  
+  r <- cor(datos[[variable_x]], datos[[variable_y]])
+  
+  
+  #----------------------------------------------------------
+  # 3. Obtener R² del modelo
+  #----------------------------------------------------------
+  r_square <- summary(modelo)$r.squared
+  
+
+  ggplot(datos, aes(x = .data[[variable_x]], y = .data[[variable_y]])) +
+    
+    # puntos de dispersión
+    geom_point(color = "red", size = 3) +
+    
+    # línea de regresión del modelo
+    geom_smooth(method = "lm", se = FALSE, color = "blue", linewidth = 1) +
+    
+    # título y subtítulo con estadísticos
+    ggtitle(
+      label = paste("Dispersión y tendencia:"),
+      subtitle = paste( variable_x, "vs", variable_y,";",
+        "r =", round(r,3),
+        "; R² =", round(r_square,3)
+      )
+    ) +
+    
+    theme_minimal()
+}
+
+
 f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
   
   #----------------------------------------------------------
