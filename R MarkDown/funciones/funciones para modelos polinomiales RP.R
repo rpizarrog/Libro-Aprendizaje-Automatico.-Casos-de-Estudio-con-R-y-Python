@@ -335,3 +335,95 @@ f_matriz_verificar_homocedasticidad <- function(modelos, datos, x, y, nombres = 
   (graficos[[1]] | graficos[[2]]) /
     (graficos[[3]] | graficos[[4]])
 }
+
+
+
+f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
+  # La función recibe modelos los datos de entrenamiento
+  # las variables independiente 'x' y dependiente 'y' así como el nombre de modelo
+  # y visualiza histograma y diagrama qq-plot asi como prueba Shapiro Wilks y verficica el 
+  # postulado de normalidad
+  if(length(modelos) != 4){
+    stop("Debes proporcionar exactamente 4 modelos")
+  }
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:4)
+  }
+  
+  graficos <- list()
+  resultados <- data.frame()
+  
+  for(i in 1:4){
+    
+    modelo <- modelos[[i]]
+    
+    #--------------------------------------------------------
+    # predicción y residuos
+    #--------------------------------------------------------
+    y_pred <- predict(modelo, newdata = datos)
+    residuos <- datos[[y]] - y_pred
+    
+    #--------------------------------------------------------
+    # Shapiro-Wilk
+    #--------------------------------------------------------
+    shapiro <- shapiro.test(residuos)
+    W <- shapiro$statistic
+    p_value <- shapiro$p.value
+    
+    interpretacion <- ifelse(p_value > 0.05, "Normal", "No normal")
+    
+    # guardar resultados
+    resultados <- rbind(resultados, data.frame(
+      Modelo = nombres[i],
+      W = round(W,4),
+      p_value = round(p_value,4),
+      Normalidad = interpretacion
+    ))
+    
+    #--------------------------------------------------------
+    # Histograma
+    #--------------------------------------------------------
+    g1 <- ggplot(data.frame(residuos), aes(x = residuos)) +
+      geom_histogram(aes(y = ..density..),
+                     bins = 20, fill = "gray70", color = "black") +
+      geom_density(color = "blue", linewidth = 1) +
+      ggtitle(nombres[i],
+              subtitle = paste("Histograma\nW =", round(W,3),
+                               "| p =", round(p_value,3),
+                               "|", interpretacion)) +
+      theme_minimal()
+    
+    #--------------------------------------------------------
+    # Q-Q plot
+    #--------------------------------------------------------
+    g2 <- ggplot(data.frame(residuos), aes(sample = residuos)) +
+      stat_qq(color = "blue") +
+      stat_qq_line(color = "red") +
+      ggtitle(nombres[i],
+              subtitle = paste("Q-Q Plot\nW =", round(W,3),
+                               "| p =", round(p_value,3),
+                               "|", interpretacion)) +
+      theme_minimal()
+    
+    graficos[[i]] <- g1 | g2
+  }
+  
+  #------------------------------------------------------------
+  # matriz final 4x2
+  #------------------------------------------------------------
+  matriz <- graficos[[1]] /
+    graficos[[2]] /
+    graficos[[3]] /
+    graficos[[4]]
+  
+  print(matriz)
+  
+  #------------------------------------------------------------
+  # ranking (mejor normalidad = mayor p-value)
+  #------------------------------------------------------------
+  resultados$Ranking <- rank(-resultados$p_value)
+  resultados <- resultados[order(resultados$Ranking), ]
+  
+  return(resultados)
+}
