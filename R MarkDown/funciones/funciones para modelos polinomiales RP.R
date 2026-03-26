@@ -161,6 +161,76 @@ f_construir_modelo <- function(datos, x, y, grado = 1){
   return(modelo)
 }
 
+
+
+f_diagrama_dispersion_tendencia <- function(modelo, datos, x, y){
+  # La función recibe el modelo los datos de entrenamiento 
+  # y construye las tendencias de los modelos polinomiales
+  r <- cor(datos[[x]], datos[[y]])
+  r2 <- summary(modelo)$r.squared
+  
+  ggplot(datos, aes_string(x = x, y = y)) +
+    geom_point(color = "black") +
+    geom_smooth(method = "lm", formula = y ~ poly(x, modelo$rank-1, raw=TRUE),
+                color = "red", se = FALSE) +
+    ggtitle("Dispersión y tendencia",
+            subtitle = paste(x, "vs", y,
+                             "; r =", round(r,3),
+                             "; R² =", round(r2,3))) +
+    theme_minimal()
+}
+
+f_matriz_dispersion_modelos_tendencia <- function(modelos, datos, x, y, nombres = NULL){
+  # La función recibe modelos los datos de entrenamiento
+  # las variables independiente 'x' y dependiente 'y' así como el nombre de modelo
+  # y visualiza las lineas de tendencia que ofrecen un panorama visual de postulado de linealidad
+
+  if(length(modelos) != 4){
+    stop("Debes proporcionar exactamente 4 modelos")
+  }
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:4)
+  }
+  
+  graficos <- list()
+  
+  for(i in 1:4){
+    
+    modelo <- modelos[[i]]
+    
+    r <- cor(datos[[x]], datos[[y]])
+    r2 <- summary(modelo)$r.squared
+    
+    # 🔥 crear secuencia ordenada
+    x_seq <- seq(min(datos[[x]]), max(datos[[x]]), length.out = 200)
+    
+    new_data <- data.frame(x_seq)
+    colnames(new_data) <- x
+    
+    # 🔥 predicción REAL del modelo
+    y_pred <- predict(modelo, newdata = new_data)
+    
+    df_linea <- data.frame(x = x_seq, y = y_pred)
+    
+    g <- ggplot(datos, aes_string(x = x, y = y)) +
+      geom_point(color = "black") +
+      geom_line(data = df_linea, aes(x = x, y = y),
+                color = "red", linewidth = 1.2) +
+      ggtitle(nombres[i],
+              subtitle = paste("r =", round(r,3),
+                               "; R² =", round(r2,3))) +
+      theme_minimal()
+    
+    graficos[[i]] <- g
+  }
+  
+  (graficos[[1]] | graficos[[2]]) /
+    (graficos[[3]] | graficos[[4]])
+}
+
+
+
 f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
   
   #----------------------------------------------------------
@@ -202,4 +272,66 @@ f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
   
   return(resultado)
   
+}
+
+
+
+f_matriz_verificar_homocedasticidad <- function(modelos, datos, x, y, nombres = NULL){
+  # Verifica homocedasticidad de los modelos 
+  if(length(modelos) != 4){
+    stop("Debes proporcionar exactamente 4 modelos")
+  }
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:4)
+  }
+  
+  graficos <- list()
+  
+  for(i in 1:4){
+    
+    modelo <- modelos[[i]]
+    
+    #--------------------------------------------------------
+    # predicciones y residuos
+    #--------------------------------------------------------
+    y_pred <- predict(modelo, newdata = datos)
+    residuos <- datos[[y]] - y_pred
+    
+    df_plot <- data.frame(
+      y_pred = y_pred,
+      residuos = residuos
+    )
+    
+    #--------------------------------------------------------
+    # gráfico
+    #--------------------------------------------------------
+    g <- ggplot(df_plot, aes(x = y_pred, y = residuos)) +
+      
+      geom_point(alpha = 0.5, color = "black") +
+      
+      # línea horizontal en cero
+      geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+      
+      # 🔥 curva suavizada (LOESS)
+      geom_smooth(method = "loess", se = FALSE,
+                  color = "blue", linewidth = 1, alpha = 0.5) +
+      
+      # 🔥 banda visual (opcional)
+      geom_hline(yintercept = c(-2*sd(residuos), 2*sd(residuos)),
+                 linetype = "dotted", alpha = 0.3) +
+      
+      ggtitle(nombres[i]) +
+      xlab("Valores ajustados") +
+      ylab("Residuos") +
+      theme_minimal()
+    
+    graficos[[i]] <- g
+  }
+  
+  #------------------------------------------------------------
+  # matriz 2x2
+  #------------------------------------------------------------
+  (graficos[[1]] | graficos[[2]]) /
+    (graficos[[3]] | graficos[[4]])
 }
