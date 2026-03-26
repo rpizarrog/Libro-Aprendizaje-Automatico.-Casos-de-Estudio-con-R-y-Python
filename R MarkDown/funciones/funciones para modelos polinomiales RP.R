@@ -614,7 +614,7 @@ f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
   
 }
 
-f_evaluar_modelos_varios <- function(modelos, datos, y, x){
+f_evaluar_modelos_varios <- function(modelos, datos, y, x, nombres){
   # Evalúa modelos calculando r square y RMSE 
   resultados <- lapply(modelos, function(m){
     f_evaluar_modelo(m, datos, y)
@@ -622,7 +622,7 @@ f_evaluar_modelos_varios <- function(modelos, datos, y, x){
   
   df <- bind_rows(resultados)
   
-  df$Modelo <- paste("Modelo", 1:nrow(df))
+  df <- cbind(df, nombres)
   
   df <- df[order(df$RMSE), ]
   
