@@ -431,4 +431,141 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
     resultados <- resultados[order(resultados$Ranking), ]
     
     return(resultados)
+}
+
+
+
+
+f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nombres = NULL, graficar = TRUE){
+  # Realiza la prueba de correlaci[on de residuales con la prueba de Durbin-Watson
+  if(length(modelos) != 4){
+    stop("Debes proporcionar exactamente 4 modelos")
   }
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:4)
+  }
+  
+  resultados <- data.frame()
+  graficos <- list()
+  
+  for(i in 1:4){
+    
+    modelo <- modelos[[i]]
+    
+    #--------------------------------------------------------
+    # Durbin-Watson (con p-value)
+    #--------------------------------------------------------
+    prueba <- dwtest(modelo)
+    
+    dw <- as.numeric(prueba$statistic)
+    p_value <- prueba$p.value
+    
+    #--------------------------------------------------------
+    # interpretación combinada
+    #--------------------------------------------------------
+    if(dw >= 1.5 & dw <= 2.5){
+      interpretacion <- "Independencia"
+    } else if(dw < 1.5){
+      interpretacion <- "Autocorrelación positiva"
+    } else {
+      interpretacion <- "Autocorrelación negativa"
+    }
+    
+    decision <- ifelse(p_value > 0.05,
+                       "No se rechaza independencia",
+                       "Se rechaza independencia")
+    
+    resultados <- rbind(resultados, data.frame(
+      Modelo = nombres[i],
+      DW = round(dw,4),
+      p_value = round(p_value,4),
+      Interpretacion = interpretacion,
+      Decision = decision
+    ))
+    
+    #--------------------------------------------------------
+    # GRÁFICO (residuos vs orden)
+    #--------------------------------------------------------
+    if(graficar){
+      
+      residuos <- residuals(modelo)
+      df_plot <- data.frame(
+        orden = 1:length(residuos),
+        residuos = residuos
+      )
+      
+      g <- ggplot(df_plot, aes(x = orden, y = residuos)) +
+        geom_line(color = "black") +
+        geom_point(color = "blue") +
+        geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+        labs(
+          title = nombres[i],
+          subtitle = paste("DW =", round(dw,3),
+                           "| p =", round(p_value,3),
+                           "\n", interpretacion,
+                           "|", decision),
+          x = "Orden",
+          y = "Residuo"
+        ) +
+        theme_minimal()
+      
+      graficos[[i]] <- g
+    }
+  }
+  
+  #------------------------------------------------------------
+  # MATRIZ DE GRÁFICOS
+  #------------------------------------------------------------
+  if(graficar){
+    layout <- (graficos[[1]] | graficos[[2]]) /
+      (graficos[[3]] | graficos[[4]])
+    
+    print(layout)
+  }
+  
+  #------------------------------------------------------------
+  # RANKING (mejor = DW más cercano a 2)
+  #------------------------------------------------------------
+  resultados$Distancia_2 <- abs(resultados$DW - 2)
+  resultados$Ranking <- rank(resultados$Distancia_2)
+  
+  resultados <- resultados[order(resultados$Ranking), ]
+  
+  return(resultados)
+}
+
+
+f_ecuaciones_modelos <- function(modelos, nombres = NULL){
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:length(modelos))
+  }
+  
+  for(i in 1:length(modelos)){
+    
+    modelo <- modelos[[i]]
+    
+    cat("\n============================\n")
+    cat(nombres[i], "\n")
+    cat("============================\n")
+    
+    coef <- coef(modelo)
+    
+    cat("\nCoeficientes:\n")
+    print(round(coef,4))
+    
+    # construir ecuación
+    ecuacion <- paste0("ŷ = ", round(coef[1],4))
+    
+    for(j in 2:length(coef)){
+      signo <- ifelse(coef[j] >= 0, "+", "-")
+      ecuacion <- paste(ecuacion,
+                        signo,
+                        abs(round(coef[j],4)),
+                        paste0("x^", j-1))
+    }
+    
+    cat("\nEcuación:\n", ecuacion, "\n")
+  }
+}
