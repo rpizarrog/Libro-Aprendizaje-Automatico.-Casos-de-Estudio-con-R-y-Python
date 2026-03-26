@@ -569,3 +569,62 @@ f_ecuaciones_modelos <- function(modelos, nombres = NULL){
     cat("\nEcuación:\n", ecuacion, "\n")
   }
 }
+
+
+f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
+  
+  #----------------------------------------------------------
+  # La función recibe como argumentos el modelo, los datos de validación y la variable dependiente
+  # que los utiliza para precisamente evaluar el modelo con la comparación entre datos reales y      # los datos de predicción. 
+  # Se generan las predicciones del modelo usando los datos de validación.
+  # Se calcula el error cuadrático medio (*MSE*) o promedio de los errores al cuadrado
+  # Se calcula la raíz del error cuadrático medio (*RMSE*) como medida interpretable del error
+  # Se calcula el coeficiente de determinación R Square r2
+  # Luego el coeficiente coeficiente de determinación *R Square ajustad* 
+  # Se construye y se devuelve como valor de retorno una tabla que resume todos los estadísticos calculados  
+  #------------------------------------------------------------
+  
+  y_real <- datos_validacion[[variable_dependiente]]
+  
+  
+  pred <- predict(modelo, newdata = datos_validacion)
+  
+  
+  mse <- mean((y_real - pred)^2)
+  
+  
+  rmse <- sqrt(mse)
+  
+  
+  r2 <- summary(modelo)$r.squared
+  
+  
+  r2_adj <- summary(modelo)$adj.r.squared
+  
+  
+  resultado <- data.frame(
+    R_square = round(r2,4),
+    R_square_ajustado = round(r2_adj,4),
+    MSE = round(mse,4),
+    RMSE = round(rmse,4)
+  )
+  
+  
+  return(resultado)
+  
+}
+
+f_evaluar_modelos_varios <- function(modelos, datos, y, x){
+  # Evalúa modelos calculando r square y RMSE 
+  resultados <- lapply(modelos, function(m){
+    f_evaluar_modelo(m, datos, y)
+  })
+  
+  df <- bind_rows(resultados)
+  
+  df$Modelo <- paste("Modelo", 1:nrow(df))
+  
+  df <- df[order(df$RMSE), ]
+  
+  return(df)
+}
