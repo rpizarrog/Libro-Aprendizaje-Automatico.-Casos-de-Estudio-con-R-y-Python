@@ -393,7 +393,7 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
 
 
 f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nombres = NULL, graficar = TRUE){
-  # Realiza la prueba de correlaci[on de residuales con la prueba de Durbin-Watson
+  # Realiza la prueba de correlación de residuales con la prueba de Durbin-Watson
   if(length(modelos) != 4){
     stop("Debes proporcionar exactamente 4 modelos")
   }
@@ -429,15 +429,15 @@ f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nomb
     }
     
     decision <- ifelse(p_value > 0.05,
-                       "No se rechaza independencia",
-                       "Se rechaza independencia")
+                       "No se rechaza ",
+                       "Se rechaza ")
     
     resultados <- rbind(resultados, data.frame(
       Modelo = nombres[i],
       DW = round(dw,4),
       p_value = round(p_value,4),
-      Interpretacion = interpretacion,
-      Decision = decision
+      Interpretación = interpretacion,
+      Decisión = decision
     ))
     
     #--------------------------------------------------------
