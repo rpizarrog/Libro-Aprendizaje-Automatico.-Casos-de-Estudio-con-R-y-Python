@@ -148,6 +148,19 @@ f_particionar_datos <- function(datos, proporcion_entrenamiento = 0.7) {
   ))
 }
 
+f_construir_modelo_log <- function(datos, x, y){
+  # Construye un modelo de regresión logarítmica (lin-log)
+  # datos: data frame
+  # x: variable independiente (texto)
+  # y: variable dependiente (texto)
+  
+  formula_texto <- paste0(y, " ~ log(", x, ")")
+  
+  modelo <- lm(as.formula(formula_texto), data = datos)
+  
+  return(modelo)
+}
+
 f_construir_modelo <- function(datos, x, y, grado = 1){
   # Construye un modelo polinomial
   # recibe los datos y los nombres de las variables independiente y dependiente así como el 
@@ -160,7 +173,6 @@ f_construir_modelo <- function(datos, x, y, grado = 1){
   
   return(modelo)
 }
-
 
 
 f_diagrama_dispersion_tendencia <- function(modelo, datos, x, y){
