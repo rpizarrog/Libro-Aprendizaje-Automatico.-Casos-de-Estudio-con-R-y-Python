@@ -226,59 +226,15 @@ f_diagrama_dispersion_tendencia <- function(modelo, datos, x, y){
     theme_minimal()
 }
 
+
+
+
+
+
 f_matriz_dispersion_modelos_tendencia <- function(modelos, datos, x, y, nombres = NULL){
   # La función recibe modelos los datos de entrenamiento
   # las variables independiente 'x' y dependiente 'y' así como el nombre de modelo
   # y visualiza las lineas de tendencia que ofrecen un panorama visual de postulado de linealidad
-  
-  if(length(modelos) != 4){
-    stop("Debes proporcionar exactamente 4 modelos")
-  }
-  
-  if(is.null(nombres)){
-    nombres <- paste("Modelo", 1:4)
-  }
-  
-  graficos <- list()
-  
-  for(i in 1:4){
-    
-    modelo <- modelos[[i]]
-    
-    r <- cor(datos[[x]], datos[[y]])
-    r2 <- summary(modelo)$r.squared
-    
-    # 🔥 crear secuencia ordenada
-    x_seq <- seq(min(datos[[x]]), max(datos[[x]]), length.out = 200)
-    
-    new_data <- data.frame(x_seq)
-    colnames(new_data) <- x
-    
-    # 🔥 predicción REAL del modelo
-    y_pred <- predict(modelo, newdata = new_data)
-    
-    df_linea <- data.frame(x = x_seq, y = y_pred)
-    
-    g <- ggplot(datos, aes_string(x = x, y = y)) +
-      geom_point(color = "black") +
-      geom_line(data = df_linea, aes(x = x, y = y),
-                color = "red", linewidth = 1.2) +
-      ggtitle(nombres[i],
-              subtitle = paste("r =", round(r,3),
-                               "; R² =", round(r2,3))) +
-      theme_minimal()
-    
-    graficos[[i]] <- g
-  }
-  
-  (graficos[[1]] | graficos[[2]]) /
-    (graficos[[3]] | graficos[[4]])
-}
-
-
-
-
-f_matriz_dispersion_modelos_tendencia <- function(modelos, datos, x, y, nombres = NULL){
   
   if(length(modelos) != 4){
     stop("Debes proporcionar exactamente 4 modelos")
@@ -335,14 +291,104 @@ f_matriz_dispersion_modelos_tendencia <- function(modelos, datos, x, y, nombres 
     (graficos[[3]] | graficos[[4]])
 }
 
-
+f_matriz_verificar_homocedasticidad <- function(modelos, datos, x, y, nombres = NULL){
+  #------------------------------------------------------------
+  # Verifica homocedasticidad de 4 modelos
+  # Soporta modelos lineales, polinomiales y exponenciales
+  #------------------------------------------------------------
+  # La función implementada permite analizar la homocedasticidad mediante gráficos de residuos 
+  # contra valores ajustados para diferentes tipos de modelos, 
+  # tales como polinomiales, logarítmicos y exponenciales. 
+  # Para los modelos estimados mediante transformación logarítmica, se realiza 
+  # una retransformación de las predicciones a la escala original, 
+  # asegurando que los residuos reflejen adecuadamente la variabilidad del modelo 
+  # en su dominio natural.
+  
+  if(length(modelos) != 4){
+    stop("Debes proporcionar exactamente 4 modelos")
+  }
+  
+  if(is.null(nombres)){
+    nombres <- paste("Modelo", 1:4)
+  }
+  
+  graficos <- list()
+  
+  for(i in 1:4){
+    
+    modelo <- modelos[[i]]
+    
+    #--------------------------------------------------------
+    # 🔥 DETECTAR SI ES MODELO EXPONENCIAL
+    #--------------------------------------------------------
+    es_exponencial <- FALSE
+    
+    if(inherits(modelo, "lm")){
+      formula_modelo <- as.character(formula(modelo))
+      es_exponencial <- grepl("log", formula_modelo[2])
+    }
+    
+    #--------------------------------------------------------
+    # PREDICCIONES
+    #--------------------------------------------------------
+    y_pred <- predict(modelo, newdata = datos)
+    
+    # 🔥 Corrección para modelo exponencial
+    if(es_exponencial){
+      y_pred <- exp(y_pred)
+    }
+    
+    #--------------------------------------------------------
+    # RESIDUOS CORRECTOS
+    #--------------------------------------------------------
+    residuos <- datos[[y]] - y_pred
+    
+    df_plot <- data.frame(
+      y_pred = y_pred,
+      residuos = residuos
+    )
+    
+    #--------------------------------------------------------
+    # GRÁFICA
+    #--------------------------------------------------------
+    g <- ggplot(df_plot, aes(x = y_pred, y = residuos)) +
+      
+      geom_point(alpha = 0.5, color = "black") +
+      
+      # línea en cero
+      geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+      
+      # suavizado LOESS
+      geom_smooth(method = "loess", se = FALSE,
+                  color = "blue", linewidth = 1, alpha = 0.5) +
+      
+      # bandas de dispersión
+      geom_hline(yintercept = c(-2*sd(residuos), 2*sd(residuos)),
+                 linetype = "dotted", alpha = 0.3) +
+      
+      ggtitle(nombres[i]) +
+      xlab("Valores ajustados") +
+      ylab("Residuos") +
+      theme_minimal()
+    
+    graficos[[i]] <- g
+  }
+  
+  #------------------------------------------------------------
+  # MATRIZ 2x2
+  #------------------------------------------------------------
+  (graficos[[1]] | graficos[[2]]) /
+    (graficos[[3]] | graficos[[4]])
+}
 
 f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
-  # La función recibe modelos los datos de entrenamiento
-  # las variables independiente 'x' y dependiente 'y' así como el nombre de modelo
-  # y visualiza histograma y diagrama qq-plot asi como prueba Shapiro Wilks y verficica el 
-  # postulado de normalidad
-  
+  #------------------------------------------------------------
+  # Verifica NORMALIDAD de residuos (visual + Shapiro)
+  # Soporta:
+  #   - Polinomiales
+  #   - Logarítmicos
+  #   - Exponenciales (log(y) ~ x)
+  #------------------------------------------------------------
   
   if(length(modelos) != 4){
     stop("Debes proporcionar exactamente 4 modelos")
@@ -359,13 +405,43 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
     
     modelo <- modelos[[i]]
     
+    #--------------------------------------------------------
+    # 🔥 DETECTAR MODELO EXPONENCIAL
+    #--------------------------------------------------------
+    es_exponencial <- FALSE
+    
+    if(inherits(modelo, "lm")){
+      formula_modelo <- as.character(formula(modelo))
+      es_exponencial <- grepl("log", formula_modelo[2])
+    }
+    
+    #--------------------------------------------------------
+    # PREDICCIONES
+    #--------------------------------------------------------
     y_pred <- predict(modelo, newdata = datos)
+    
+    # 🔥 corrección exponencial
+    if(es_exponencial){
+      y_pred <- exp(y_pred)
+    }
+    
+    #--------------------------------------------------------
+    # RESIDUOS CORRECTOS
+    #--------------------------------------------------------
     residuos <- datos[[y]] - y_pred
     
     #--------------------------------------------------------
-    # Shapiro
+    # SHAPIRO (limitado a 5000)
     #--------------------------------------------------------
-    sh <- shapiro.test(residuos)
+    if(length(residuos) > 5000){
+      set.seed(123)
+      residuos_test <- sample(residuos, 5000)
+    } else {
+      residuos_test <- residuos
+    }
+    
+    sh <- shapiro.test(residuos_test)
+    
     W <- sh$statistic
     p <- sh$p.value
     
@@ -381,13 +457,14 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
     df <- data.frame(residuos = residuos)
     
     #--------------------------------------------------------
-    # HISTOGRAMA (frecuencia, no densidad)
+    # HISTOGRAMA
     #--------------------------------------------------------
     g1 <- ggplot(df, aes(x = residuos)) +
-      geom_histogram(bins = 25,
-                     fill = "gray70",
+      geom_histogram(bins = 30,
+                     fill = "gray80",
                      color = "black") +
-      geom_density(aes(y = ..count..), color = "blue", linewidth = 1) +
+      geom_density(aes(y = ..count..),
+                   color = "blue", linewidth = 1) +
       labs(
         title = nombres[i],
         subtitle = paste("Histograma | W =", round(W,3),
@@ -399,7 +476,7 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
       theme_minimal(base_size = 11)
     
     #--------------------------------------------------------
-    # QQPLOT (más claro)
+    # QQ-PLOT
     #--------------------------------------------------------
     g2 <- ggplot(df, aes(sample = residuos)) +
       stat_qq(size = 1.2, color = "blue") +
@@ -418,25 +495,28 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
   }
   
   #------------------------------------------------------------
-  # 🔥 MEJOR ORGANIZACIÓN VISUAL
+  # MATRIZ VISUAL 2x2
   #------------------------------------------------------------
   layout <- (graficos[[1]] / graficos[[2]]) |
     (graficos[[3]] / graficos[[4]])
   
   print(layout)
   
-  # ranking
+  #------------------------------------------------------------
+  # RANKING (mejor p-value arriba)
+  #------------------------------------------------------------
   resultados$Ranking <- rank(-resultados$p_value)
   resultados <- resultados[order(resultados$Ranking), ]
   
   return(resultados)
 }
 
-
-
-
 f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nombres = NULL, graficar = TRUE){
-  # Realiza la prueba de correlación de residuales con la prueba de Durbin-Watson
+  
+  library(ggplot2)
+  library(lmtest)
+  library(patchwork)
+  
   if(length(modelos) != 4){
     stop("Debes proporcionar exactamente 4 modelos")
   }
@@ -453,50 +533,47 @@ f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nomb
     modelo <- modelos[[i]]
     
     #--------------------------------------------------------
-    # Durbin-Watson (con p-value)
+    # 🔥 TRY para evitar fallos silenciosos
     #--------------------------------------------------------
-    prueba <- dwtest(modelo)
-    
-    dw <- as.numeric(prueba$statistic)
-    p_value <- prueba$p.value
-    
-    #--------------------------------------------------------
-    # interpretación combinada
-    #--------------------------------------------------------
-    if(dw >= 1.5 & dw <= 2.5){
-      interpretacion <- "Independencia"
-    } else if(dw < 1.5){
-      interpretacion <- "Autocorrelación positiva"
-    } else {
-      interpretacion <- "Autocorrelación negativa"
-    }
-    
-    decision <- ifelse(p_value > 0.05,
-                       "No se rechaza ",
-                       "Se rechaza ")
-    
-    resultados <- rbind(resultados, data.frame(
-      Modelo = nombres[i],
-      DW = round(dw,4),
-      p_value = round(p_value,4),
-      Interpretación = interpretacion,
-      Decisión = decision
-    ))
-    
-    #--------------------------------------------------------
-    # GRÁFICO (residuos vs orden)
-    #--------------------------------------------------------
-    if(graficar){
+    try({
       
+      prueba <- lmtest::dwtest(modelo)
+      
+      dw <- as.numeric(prueba$statistic)
+      p_value <- prueba$p.value
+      
+      # interpretación
+      if(dw >= 1.5 & dw <= 2.5){
+        interpretacion <- "Independencia"
+      } else if(dw < 1.5){
+        interpretacion <- "Autocorrelación positiva"
+      } else {
+        interpretacion <- "Autocorrelación negativa"
+      }
+      
+      decision <- ifelse(p_value > 0.05,
+                         "No se rechaza H0",
+                         "Se rechaza H0")
+      
+      resultados <- rbind(resultados, data.frame(
+        Modelo = nombres[i],
+        DW = round(dw,4),
+        p_value = round(p_value,4),
+        Interpretacion = interpretacion,
+        Decision = decision
+      ))
+      
+      # residuos
       residuos <- residuals(modelo)
+      
       df_plot <- data.frame(
         orden = 1:length(residuos),
         residuos = residuos
       )
       
       g <- ggplot(df_plot, aes(x = orden, y = residuos)) +
-        geom_line(color = "black") +
-        geom_point(color = "blue") +
+        geom_line(color = "black", linewidth = 0.5) +
+        geom_point(color = "blue", size = 1) +
         geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
         labs(
           title = nombres[i],
@@ -510,13 +587,19 @@ f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nomb
         theme_minimal()
       
       graficos[[i]] <- g
-    }
+      
+    }, silent = TRUE)
   }
   
   #------------------------------------------------------------
-  # MATRIZ DE GRÁFICOS
+  # 🔥 VERIFICAR QUE EXISTEN LOS 4 GRÁFICOS
   #------------------------------------------------------------
   if(graficar){
+    
+    if(length(graficos) < 4){
+      warning("No se generaron los 4 gráficos. Revisa modelos.")
+    }
+    
     layout <- (graficos[[1]] | graficos[[2]]) /
       (graficos[[3]] | graficos[[4]])
     
@@ -524,16 +607,16 @@ f_matriz_verificar_independencia_residuos <- function(modelos, datos, x, y, nomb
   }
   
   #------------------------------------------------------------
-  # RANKING (mejor = DW más cercano a 2)
+  # RANKING
   #------------------------------------------------------------
-  resultados$Distancia_2 <- abs(resultados$DW - 2)
-  resultados$Ranking <- rank(resultados$Distancia_2)
-  
-  resultados <- resultados[order(resultados$Ranking), ]
+  if(nrow(resultados) > 0){
+    resultados$Distancia_2 <- abs(resultados$DW - 2)
+    resultados$Ranking <- rank(resultados$Distancia_2)
+    resultados <- resultados[order(resultados$Ranking), ]
+  }
   
   return(resultados)
 }
-
 
 f_ecuaciones_modelos <- function(modelos, nombres = NULL){
   
