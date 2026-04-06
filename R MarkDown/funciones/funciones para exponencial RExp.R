@@ -164,33 +164,24 @@ f_construir_modelo_log <- function(datos, x, y){
 f_construir_modelo_exp <- function(datos, var_x, var_y) {
   
   #------------------------------------------------------------
-  # Objetivo:
-  #   Construir un modelo de regresión exponencial
-  #   mediante transformación logarítmica
-  #
-  # Retorna:
-  #   Modelo lineal (lm) sobre log(y)
+  # Construye modelo exponencial: log(y) ~ x
   #------------------------------------------------------------
   
-  # Validación de variables
+  # Validación
   if (!all(c(var_x, var_y) %in% names(datos))) {
     stop("Las variables no existen en el dataset")
   }
   
-  # Extraer variables
-  x <- datos[[var_x]]
-  y <- datos[[var_y]]
-  
-  # Validación: log requiere valores positivos
-  if (any(y <= 0)) {
+  if (any(datos[[var_y]] <= 0)) {
     stop("La variable dependiente debe ser positiva")
   }
   
-  # Transformación logarítmica
-  log_y <- log(y)
+  #------------------------------------------------------------
+  # Fórmula dinámica (🔥 clave)
+  #------------------------------------------------------------
+  formula_texto <- paste0("log(", var_y, ") ~ ", var_x)
   
-  # Construcción del modelo
-  modelo <- lm(log_y ~ x)
+  modelo <- lm(as.formula(formula_texto), data = datos)
   
   return(modelo)
 }
@@ -692,60 +683,83 @@ f_ecuaciones_modelos <- function(modelos, nombres = NULL){
 }
 
 
+
+
 f_evaluar_modelo <- function(modelo, datos_validacion, variable_dependiente){
-  
-  #----------------------------------------------------------
-  # La función recibe como argumentos el modelo, los datos de validación y la variable dependiente
-  # que los utiliza para precisamente evaluar el modelo con la comparación entre datos reales y      # los datos de predicción. 
-  # Se generan las predicciones del modelo usando los datos de validación.
-  # Se calcula el error cuadrático medio (*MSE*) o promedio de los errores al cuadrado
-  # Se calcula la raíz del error cuadrático medio (*RMSE*) como medida interpretable del error
-  # Se calcula el coeficiente de determinación R Square r2
-  # Luego el coeficiente coeficiente de determinación *R Square ajustad* 
-  # Se construye y se devuelve como valor de retorno una tabla que resume todos los estadísticos calculados  
-  #------------------------------------------------------------
   
   y_real <- datos_validacion[[variable_dependiente]]
   
-  
   pred <- predict(modelo, newdata = datos_validacion)
   
+  #--------------------------------------------------------
+  # 🔴 VALIDACIÓN CRÍTICA
+  #--------------------------------------------------------
+  if(length(pred) != length(y_real)){
+    stop("Error: predicciones y valores reales tienen diferente longitud. Revisa variables del modelo.")
+  }
   
-  mse <- mean((y_real - pred)^2)
+  #--------------------------------------------------------
+  # detectar exponencial
+  #--------------------------------------------------------
+  es_exponencial <- FALSE
   
+  if(inherits(modelo, "lm")){
+    formula_modelo <- as.character(formula(modelo))
+    es_exponencial <- grepl("log", formula_modelo[2])
+  }
   
+  if(es_exponencial){
+    pred <- exp(pred)
+  }
+  
+  errores <- y_real - pred
+  
+  mse  <- mean(errores^2)
   rmse <- sqrt(mse)
+  mae  <- mean(abs(errores))
   
+  mape <- mean(abs(errores / ifelse(y_real == 0, NA, y_real)), na.rm = TRUE) * 100
   
-  r2 <- summary(modelo)$r.squared
-  
-  
-  r2_adj <- summary(modelo)$adj.r.squared
-  
+  # R² correcto
+  sst <- sum((y_real - mean(y_real))^2)
+  sse <- sum((y_real - pred)^2)
+  r2 <- 1 - (sse / sst)
   
   resultado <- data.frame(
     R_square = round(r2,4),
-    R_square_ajustado = round(r2_adj,4),
-    MSE = round(mse,4),
-    RMSE = round(rmse,4)
+    MSE  = round(mse,4),
+    RMSE = round(rmse,4),
+    MAE  = round(mae,4),
+    MAPE = round(mape,2)
   )
   
-  
   return(resultado)
-  
 }
 
-f_evaluar_modelos_varios <- function(modelos, datos, y, x, nombres){
-  # Evalúa modelos calculando r square y RMSE 
+f_evaluar_modelos_varios <- function(modelos, datos, y, nombres){
+  
+  if(length(modelos) != length(nombres)){
+    stop("El número de modelos y nombres debe coincidir")
+  }
+  
+  #--------------------------------------------------------
+  # Evaluar cada modelo
+  #--------------------------------------------------------
   resultados <- lapply(modelos, function(m){
     f_evaluar_modelo(m, datos, y)
   })
   
-  df <- bind_rows(resultados)
+  df <- dplyr::bind_rows(resultados)
   
-  df <- cbind(df, nombres)
+  # agregar nombres de modelos
+  df$Modelo <- nombres
   
+  #--------------------------------------------------------
+  # Ordenar por RMSE (mejor = menor error)
+  #--------------------------------------------------------
   df <- df[order(df$RMSE), ]
+  
+  rownames(df) <- NULL
   
   return(df)
 }
