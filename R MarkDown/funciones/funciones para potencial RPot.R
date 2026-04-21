@@ -595,48 +595,36 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
     modelo <- modelos[[i]]
     
     #--------------------------------------------------------
-    # 🔥 DETECTAR TIPO DE MODELO (IGUAL QUE HOMOCEDASTICIDAD)
+    # 🔥 DETECCIÓN DE TIPO (TU LÓGICA MEJORADA)
     #--------------------------------------------------------
-    tipo <- "lineal"
+    lhs <- as.character(formula(modelo))[2]
+    rhs <- as.character(formula(modelo))[3]
     
-    if(inherits(modelo, "lm")){
-      
-      formula_modelo <- paste(as.character(formula(modelo)), collapse = " ")
-      
-      es_log_y <- grepl("log\\(", formula_modelo) && grepl("~", formula_modelo)
-      es_log_x <- grepl("~ log\\(", formula_modelo)
-      
-      if(es_log_y & es_log_x){
-        tipo <- "potencial"
-      } else if(es_log_y){
-        tipo <- "exponencial"
-      } else if(es_log_x){
-        tipo <- "logaritmico"
-      } else {
-        tipo <- "polinomial"
-      }
+    es_log_y <- grepl("^log\\(", lhs)
+    es_log_x <- grepl("log\\(", rhs)
+    
+    if(es_log_y & es_log_x){
+      tipo <- "potencial"
+    } else if(es_log_y){
+      tipo <- "exponencial"
+    } else if(es_log_x){
+      tipo <- "logaritmico"
+    } else if(grepl("poly", rhs)){
+      tipo <- "polinomial"
+    } else {
+      tipo <- "lineal"
     }
     
     #--------------------------------------------------------
-    # PREDICCIONES
+    # 🔥 RESIDUOS CORRECTOS (CLAVE)
     #--------------------------------------------------------
-    y_pred <- predict(modelo, newdata = datos)
+    residuos <- residuals(modelo)
     
-    #--------------------------------------------------------
-    # 🔥 CORRECCIÓN DE ESCALA
-    #--------------------------------------------------------
-    if(tipo == "exponencial"){
-      y_pred <- exp(y_pred)
-    }
+    # eliminar valores problemáticos
+    residuos <- residuos[is.finite(residuos)]
     
-    if(tipo == "potencial"){
-      y_pred <- exp(y_pred)
-    }
-    
-    #--------------------------------------------------------
-    # RESIDUOS CORRECTOS
-    #--------------------------------------------------------
-    residuos <- datos[[y]] - y_pred
+    # estandarizar (evita escalas absurdas)
+    residuos <- scale(residuos)[,1]
     
     #--------------------------------------------------------
     # SHAPIRO
@@ -653,7 +641,7 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
     W <- sh$statistic
     p <- sh$p.value
     
-    interpretacion <- ifelse(p > 0.05, "Normal", "No normal")
+    interpretacion <- ifelse(p > 0.05, "✔ Normal", "✖ No normal")
     
     resultados <- rbind(resultados, data.frame(
       Modelo = nombres[i],
@@ -677,7 +665,7 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
                          "| W =", round(W,3),
                          "| p =", round(p,3),
                          "|", interpretacion),
-        x = "Residuos",
+        x = "Residuos estandarizados",
         y = "Frecuencia"
       ) +
       theme_minimal(base_size = 11) +
@@ -706,7 +694,7 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
   }
   
   #------------------------------------------------------------
-  # PANEL DINÁMICO (COMO LA OTRA FUNCIÓN)
+  # PANEL DINÁMICO
   #------------------------------------------------------------
   panel <- wrap_plots(graficos, ncol = ifelse(n <= 4, 2, 3)) +
     plot_annotation(title = "Evaluación de normalidad de residuos")
@@ -718,6 +706,8 @@ f_matriz_verificar_normalidad <- function(modelos, datos, x, y, nombres = NULL){
   #------------------------------------------------------------
   resultados$Ranking <- rank(-resultados$p_value)
   resultados <- resultados[order(resultados$Ranking), ]
+  
+  rownames(resultados) <- NULL
   
   return(resultados)
 }
