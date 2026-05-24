@@ -1,4 +1,4 @@
-fixed acidity,volatile acidity,citric acid,residual sugar,chlorides,free sulfur dioxide,total sulfur dioxide,density,pH,sulphates,alcohol,indice_alcohol_acidez,balance_azucar_acidez,indice_mineralidad,potencial_alcoholico,relacion_SO2,alcohol_2,density_2,sugar_2,acidez_2,alcohol_sulphates,density_sugar,acidez_pH,alcohol_acidez_volatil,quality
+fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol,indice_alcohol_acidez,balance_azucar_acidez,indice_mineralidad,potencial_alcoholico,relacion_SO2,alcohol_2,density_2,sugar_2,acidez_2,alcohol_sulphates,density_sugar,acidez_pH,alcohol_acidez_volatil,quality
 7.0,0.27,0.36,20.7,0.045,45.0,170.0,1.001,3.0,0.45,8.8,1.2571,73.9286,0.495,8.8088,0.2632,77.44,1.002,428.49,49.0,3.96,20.7207,21.0,2.376,6
 6.3,0.3,0.34,1.6,0.049,14.0,132.0,0.994,3.3,0.49,9.5,1.5079,5.1613,0.539,9.443,0.1053,90.25,0.988,2.56,39.69,4.655,1.5904,20.79,2.85,6
 8.1,0.28,0.4,6.9,0.05,30.0,97.0,0.9951,3.26,0.44,10.1,1.2469,23.7931,0.49,10.0505,0.3061,102.01,0.9902,47.61,65.61,4.444,6.8662,26.406,2.828,6
