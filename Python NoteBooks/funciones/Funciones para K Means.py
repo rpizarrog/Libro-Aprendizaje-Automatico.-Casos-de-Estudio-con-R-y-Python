@@ -1,7 +1,4 @@
-# Funciones para implementar y evaluar modelos KNN ADA BOOST Y BAYES 
-
-# Permite construir modelos de clasificación
-# K-Means
+# Funciones para implementar # K-Means
 
 # Rubén Pizarro Gurrola
 # Julio 2026
