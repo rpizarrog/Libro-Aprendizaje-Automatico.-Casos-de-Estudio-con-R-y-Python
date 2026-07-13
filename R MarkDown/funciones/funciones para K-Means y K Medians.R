@@ -1170,19 +1170,49 @@ f_crear_KMeans <- function(
 # - Actualiza centros con medianas.
 #=========================================================
 
+#=========================================================
+# FUNCIÓN
+# f_crear_KMedians()
+#
+# OBJETIVO:
+# - Crear modelo K-Medians.
+# - Usar distancia Manhattan.
+# - Actualizar centros con medianas.
+# - Permitir datos estandarizados o no estandarizados.
+# - Probar varias inicializaciones con nstart.
+# - Conservar la solución con menor SAD.
+#
+# DEVUELVE:
+# - cluster: grupo asignado a cada registro.
+# - medianas_modelo: medianas en la escala usada para modelar.
+# - medianas_originales: medianas en la escala original.
+# - SAD_total: suma total de distancias absolutas.
+# - SAD_por_cluster.
+# - SAD_por_registro.
+# - datos_modelo: datos usados por el algoritmo.
+# - objeto_escala: medias y desviaciones si se estandarizó.
+#=========================================================
+
 f_crear_KMedians <- function(
     datos,
     variables,
     centers = 3,
+    nstart = 25,
     max_iter = 100,
-    semilla = 123) {
+    semilla = 123,
+    estandarizar = TRUE,
+    decimales = 4) {
   
   #-------------------------------------------------------
-  # Validaciones
+  # Validaciones básicas
   #-------------------------------------------------------
   
   if (!is.data.frame(datos)) {
     stop("El objeto 'datos' debe ser un data.frame.")
+  }
+  
+  if (missing(variables)) {
+    stop("Debe indicar el vector de variables a utilizar.")
   }
   
   for (variable in variables) {
@@ -1200,130 +1230,278 @@ f_crear_KMedians <- function(
     stop("El número de clústeres debe ser al menos 2.")
   }
   
+  if (nstart < 1) {
+    stop("nstart debe ser al menos 1.")
+  }
+  
+  if (max_iter < 1) {
+    stop("max_iter debe ser al menos 1.")
+  }
+  
   #-------------------------------------------------------
-  # Datos numéricos
+  # Datos originales
   #-------------------------------------------------------
   
-  X <- as.matrix(datos[, variables])
+  X_original <- as.matrix(datos[, variables])
   
-  if (any(is.na(X))) {
+  if (any(is.na(X_original))) {
     stop("Existen valores perdidos. Deben tratarse antes de aplicar K-Medians.")
   }
   
-  n <- nrow(X)
+  #-------------------------------------------------------
+  # Estandarizar si se solicita
+  #-------------------------------------------------------
+  
+  if (estandarizar) {
+    
+    X_modelo <- scale(X_original)
+    
+    objeto_escala <- list(
+      center = attr(X_modelo, "scaled:center"),
+      scale = attr(X_modelo, "scaled:scale")
+    )
+    
+    X_modelo <- as.matrix(X_modelo)
+    
+  } else {
+    
+    X_modelo <- X_original
+    
+    objeto_escala <- NULL
+  }
+  
+  n <- nrow(X_modelo)
+  
+  #-------------------------------------------------------
+  # Objetos para guardar la mejor solución
+  #-------------------------------------------------------
+  
+  mejor_SAD <- Inf
+  mejor_cluster <- NULL
+  mejores_medianas <- NULL
+  mejor_iteracion <- NULL
+  mejor_inicio <- NULL
+  
+  resumen_inicios <- data.frame()
   
   set.seed(semilla)
   
   #-------------------------------------------------------
-  # Seleccionar centros iniciales aleatorios
+  # Repetir varias inicializaciones
   #-------------------------------------------------------
   
-  indices_iniciales <- sample(1:n, centers)
-  
-  medianas <- X[indices_iniciales, , drop = FALSE]
-  
-  cluster_anterior <- rep(NA, n)
-  
-  #-------------------------------------------------------
-  # Iteraciones
-  #-------------------------------------------------------
-  
-  for (iteracion in 1:max_iter) {
+  for (inicio in 1:nstart) {
     
     #-----------------------------------------------------
-    # Calcular distancia Manhattan de cada registro
-    # a cada mediana
+    # Seleccionar centros iniciales aleatorios
     #-----------------------------------------------------
     
-    distancias <- matrix(0, nrow = n, ncol = centers)
+    indices_iniciales <- sample(1:n, centers)
     
-    for (k in 1:centers) {
+    medianas <- X_modelo[indices_iniciales, , drop = FALSE]
+    
+    cluster_anterior <- rep(NA, n)
+    
+    #-----------------------------------------------------
+    # Iteraciones
+    #-----------------------------------------------------
+    
+    for (iteracion in 1:max_iter) {
       
-      distancias[, k] <- rowSums(
-        abs(
-          sweep(
-            X,
-            2,
-            medianas[k, ],
-            FUN = "-"
+      #---------------------------------------------------
+      # Calcular distancia Manhattan
+      #---------------------------------------------------
+      
+      distancias <- matrix(0, nrow = n, ncol = centers)
+      
+      for (k in 1:centers) {
+        
+        distancias[, k] <- rowSums(
+          abs(
+            sweep(
+              X_modelo,
+              2,
+              medianas[k, ],
+              FUN = "-"
+            )
           )
         )
+      }
+      
+      #---------------------------------------------------
+      # Asignar cada registro al centro más cercano
+      #---------------------------------------------------
+      
+      cluster <- apply(distancias, 1, which.min)
+      
+      #---------------------------------------------------
+      # Detener si ya no cambia
+      #---------------------------------------------------
+      
+      if (all(cluster == cluster_anterior, na.rm = TRUE)) {
+        break
+      }
+      
+      cluster_anterior <- cluster
+      
+      #---------------------------------------------------
+      # Actualizar medianas
+      #---------------------------------------------------
+      
+      for (k in 1:centers) {
+        
+        if (sum(cluster == k) > 0) {
+          
+          medianas[k, ] <- apply(
+            X_modelo[cluster == k, , drop = FALSE],
+            2,
+            median
+          )
+          
+        } else {
+          
+          # Si un clúster queda vacío, se reinicia
+          medianas[k, ] <- X_modelo[sample(1:n, 1), ]
+        }
+      }
+    }
+    
+    #-----------------------------------------------------
+    # Calcular SAD de esta inicialización
+    #-----------------------------------------------------
+    
+    SAD_por_registro <- numeric(n)
+    
+    for (i in 1:n) {
+      
+      k <- cluster[i]
+      
+      SAD_por_registro[i] <- sum(
+        abs(X_modelo[i, ] - medianas[k, ])
       )
     }
     
-    #-----------------------------------------------------
-    # Asignar cada registro al centro más cercano
-    #-----------------------------------------------------
+    SAD_total <- sum(SAD_por_registro)
     
-    cluster <- apply(distancias, 1, which.min)
-    
-    #-----------------------------------------------------
-    # Si ya no cambia la asignación, detener
-    #-----------------------------------------------------
-    
-    if (all(cluster == cluster_anterior, na.rm = TRUE)) {
-      break
-    }
-    
-    cluster_anterior <- cluster
+    resumen_inicios <- rbind(
+      resumen_inicios,
+      data.frame(
+        inicio = inicio,
+        SAD_total = round(SAD_total, decimales),
+        iteraciones = iteracion
+      )
+    )
     
     #-----------------------------------------------------
-    # Actualizar medianas
+    # Guardar mejor solución
     #-----------------------------------------------------
     
-    for (k in 1:centers) {
+    if (SAD_total < mejor_SAD) {
       
-      if (sum(cluster == k) > 0) {
-        
-        medianas[k, ] <- apply(
-          X[cluster == k, , drop = FALSE],
-          2,
-          median
-        )
-      }
+      mejor_SAD <- SAD_total
+      mejor_cluster <- cluster
+      mejores_medianas <- medianas
+      mejor_iteracion <- iteracion
+      mejor_inicio <- inicio
     }
   }
   
   #-------------------------------------------------------
-  # Calcular SAD total
-  # Sum of Absolute Deviations
+  # Calcular SAD final de la mejor solución
   #-------------------------------------------------------
   
   SAD_por_registro <- numeric(n)
   
   for (i in 1:n) {
     
-    k <- cluster[i]
+    k <- mejor_cluster[i]
     
     SAD_por_registro[i] <- sum(
-      abs(X[i, ] - medianas[k, ])
+      abs(X_modelo[i, ] - mejores_medianas[k, ])
     )
   }
   
-  SAD_total <- sum(SAD_por_registro)
-  
   SAD_por_cluster <- tapply(
     SAD_por_registro,
-    cluster,
+    mejor_cluster,
     sum
   )
   
   #-------------------------------------------------------
-  # Preparar resultados
+  # Medianas en la escala del modelo
   #-------------------------------------------------------
   
-  colnames(medianas) <- variables
+  colnames(mejores_medianas) <- variables
+  
+  medianas_modelo <- as.data.frame(mejores_medianas)
+  
+  medianas_modelo$cluster <- 1:centers
+  
+  medianas_modelo <- medianas_modelo[, c("cluster", variables)]
+  
+  medianas_modelo[, variables] <- round(
+    medianas_modelo[, variables],
+    decimales
+  )
+  
+  #-------------------------------------------------------
+  # Medianas en escala original
+  # Se recalculan directamente sobre los datos originales
+  # según los clústeres finales.
+  #-------------------------------------------------------
+  
+  datos_temp <- datos
+  
+  datos_temp$cluster_KMedians <- mejor_cluster
+  
+  medianas_originales <- aggregate(
+    datos_temp[, variables],
+    by = list(cluster = datos_temp$cluster_KMedians),
+    FUN = median
+  )
+  
+  medianas_originales[, variables] <- round(
+    medianas_originales[, variables],
+    decimales
+  )
+  
+  #-------------------------------------------------------
+  # Frecuencia por clúster
+  #-------------------------------------------------------
+  
+  frecuencia_cluster <- as.data.frame(
+    table(mejor_cluster)
+  )
+  
+  names(frecuencia_cluster) <- c("cluster", "n")
+  
+  frecuencia_cluster$cluster <- as.integer(
+    as.character(frecuencia_cluster$cluster)
+  )
+  
+  #-------------------------------------------------------
+  # Resultado
+  #-------------------------------------------------------
   
   resultado <- list(
-    cluster = cluster,
-    medianas = as.data.frame(medianas),
-    SAD_total = SAD_total,
-    SAD_por_cluster = SAD_por_cluster,
-    iteraciones = iteracion,
+    cluster = mejor_cluster,
+    medianas_modelo = medianas_modelo,
+    medianas_originales = medianas_originales,
+    SAD_total = round(mejor_SAD, decimales),
+    SAD_por_cluster = round(SAD_por_cluster, decimales),
+    SAD_por_registro = round(SAD_por_registro, decimales),
+    frecuencia_cluster = frecuencia_cluster,
+    mejor_inicio = mejor_inicio,
+    iteraciones = mejor_iteracion,
+    resumen_inicios = resumen_inicios,
+    datos_modelo = as.data.frame(X_modelo),
+    objeto_escala = objeto_escala,
     variables = variables,
-    centers = centers
+    centers = centers,
+    nstart = nstart,
+    max_iter = max_iter,
+    estandarizar = estandarizar
   )
   
   return(resultado)
 }
-
