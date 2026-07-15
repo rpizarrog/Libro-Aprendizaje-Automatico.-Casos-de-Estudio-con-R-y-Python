@@ -1,4 +1,4 @@
-﻿cliente,segmento_cliente,canal_compra,region,tipo_producto,frecuencia_compra,nivel_satisfaccion,metodo_pago,respuesta_promocion,perfil_simulado
+﻿cliente,segmento_cliente,canal,region,producto,frecuencia,satisfaccion,pago,respromocion,perfil_simulado
 C0001,Premium,Web,Occidente,Servicios,Media,Alta,Digital,Media,Cliente_leal
 C0002,Promocional,Web,Sur,Moda,Media,Media,Digital,Alta,Cliente_promocional
 C0003,Riesgo,Tienda,Occidente,Alimentos,Baja,Media,Efectivo,Baja,Cliente_riesgo
