@@ -1364,7 +1364,7 @@ def f_visualizar_ROC(
         predicciones,
         variable_real="Real",
         variable_probabilidad="Probabilidad",
-        clase_positiva="Yes"):
+        clase_positiva=1):
 
     import matplotlib.pyplot as plt
     import pandas as pd
