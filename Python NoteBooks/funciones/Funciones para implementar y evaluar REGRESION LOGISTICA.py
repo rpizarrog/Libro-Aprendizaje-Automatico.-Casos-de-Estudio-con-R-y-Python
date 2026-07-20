@@ -1359,11 +1359,12 @@ def f_evaluacion(
 #   - Devuelve FPR, TPR y Umbrales
 #=========================================================
 
+
 def f_visualizar_ROC(
         predicciones,
         variable_real="Real",
         variable_probabilidad="Probabilidad",
-        clase_positiva=1): # Yes
+        clase_positiva="Yes"):
 
     import matplotlib.pyplot as plt
     import pandas as pd
@@ -1439,4 +1440,8 @@ def f_visualizar_ROC(
 
         "FPR": fpr,
 
-        
+        "TPR": tpr
+
+    })
+
+    return tabla_roc, auc
