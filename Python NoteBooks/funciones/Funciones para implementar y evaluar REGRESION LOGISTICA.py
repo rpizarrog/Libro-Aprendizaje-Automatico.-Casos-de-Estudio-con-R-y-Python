@@ -1342,3 +1342,101 @@ def f_evaluacion(
     )
 
     return resultados
+
+
+#=========================================================
+# FUNCIÓN
+# f_visualizar_ROC()
+#
+# ACEPTA:
+#   - DataFrame de predicciones
+#   - Columna Real
+#   - Columna Probabilidad
+#
+# GENERA:
+#   - Curva ROC
+#   - AUC
+#   - Devuelve FPR, TPR y Umbrales
+#=========================================================
+
+def f_visualizar_ROC(
+        predicciones,
+        variable_real="Real",
+        variable_probabilidad="Probabilidad",
+        clase_positiva=1): # Yes
+
+    import matplotlib.pyplot as plt
+    import pandas as pd
+
+    from sklearn.metrics import (
+        roc_curve,
+        roc_auc_score
+    )
+
+    #-----------------------------------------------------
+    # DATOS
+    #-----------------------------------------------------
+
+    y_real = predicciones[variable_real]
+
+    y_prob = predicciones[variable_probabilidad]
+
+    #-----------------------------------------------------
+    # CURVA ROC
+    #-----------------------------------------------------
+
+    fpr, tpr, umbrales = roc_curve(
+        y_real,
+        y_prob,
+        pos_label=clase_positiva
+    )
+
+    auc = roc_auc_score(
+        y_real,
+        y_prob
+    )
+
+    #-----------------------------------------------------
+    # GRÁFICO
+    #-----------------------------------------------------
+
+    plt.figure(figsize=(8,6))
+
+    plt.plot(
+        fpr,
+        tpr,
+        color="blue",
+        linewidth=3,
+        label=f"AUC = {auc:.3f}"
+    )
+
+    plt.plot(
+        [0,1],
+        [0,1],
+        "--",
+        color="gray"
+    )
+
+    plt.xlabel("1 - Especificidad")
+
+    plt.ylabel("Sensibilidad")
+
+    plt.title("Curva ROC")
+
+    plt.legend()
+
+    plt.grid(alpha=.30)
+
+    plt.show()
+
+    #-----------------------------------------------------
+    # TABLA ROC
+    #-----------------------------------------------------
+
+    tabla_roc = pd.DataFrame({
+
+        "Umbral": umbrales,
+
+        "FPR": fpr,
+
+        
