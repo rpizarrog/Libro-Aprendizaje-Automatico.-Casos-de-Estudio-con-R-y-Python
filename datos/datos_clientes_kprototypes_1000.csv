@@ -1,0 +1,1001 @@
+﻿id,edad,ingreso,visitasmes,gasto,canal,region,satisfaccion,promocion,perfil_simulado
+C0001,37,27314,6,1029,App,Centro,Baja,Alta,Promocional sensible
+C0002,33,20752,5,879,Tienda,Norte,Alta,Baja,Ocasional presencial
+C0003,58,18618,7,920,Web,Occidente,Baja,Media,Ocasional presencial
+C0004,41,19504,4,1311,Web,Centro,Alta,Media,Ocasional presencial
+C0005,22,28646,10,400,App,Occidente,Media,Media,Promocional sensible
+C0006,43,42390,16,3699,App,Norte,Alta,Media,Alto valor digital
+C0007,20,19000,5,1127,Tienda,Sur,Baja,Media,Ocasional presencial
+C0008,33,34846,4,1718,Tienda,Centro,Media,Baja,Promocional sensible
+C0009,57,27099,1,788,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0010,70,18865,2,732,Tienda,Sur,Baja,Alta,Ocasional presencial
+C0011,38,31655,8,1970,Web,Centro,Alta,Alta,Promocional sensible
+C0012,23,35542,4,832,Tienda,Sur,Media,Media,Ocasional presencial
+C0013,36,28408,5,1185,Tienda,Sur,Baja,Alta,Promocional sensible
+C0014,41,18481,1,350,Tienda,Centro,Media,Baja,Cliente en riesgo
+C0015,21,19107,4,2122,Web,Centro,Alta,Alta,Promocional sensible
+C0016,25,21282,14,1682,Web,Centro,Alta,Alta,Promocional sensible
+C0017,50,20975,0,551,Tienda,Centro,Media,Baja,Cliente en riesgo
+C0018,35,38282,8,2430,Web,Centro,Media,Alta,Promocional sensible
+C0019,40,53910,17,3598,Web,Centro,Alta,Alta,Alto valor digital
+C0020,26,47952,12,3555,App,Norte,Alta,Media,Alto valor digital
+C0021,43,30871,16,2620,Web,Sur,Alta,Alta,Alto valor digital
+C0022,44,40546,14,2892,App,Sur,Alta,Baja,Alto valor digital
+C0023,31,25207,4,1440,Tienda,Occidente,Media,Media,Ocasional presencial
+C0024,35,47288,13,3161,App,Centro,Alta,Alta,Alto valor digital
+C0025,20,32726,7,1786,Tienda,Occidente,Media,Alta,Promocional sensible
+C0026,54,27321,7,1191,Tienda,Sur,Alta,Media,Ocasional presencial
+C0027,31,18744,1,461,Tienda,Occidente,Baja,Alta,Cliente en riesgo
+C0028,26,28426,10,1729,App,Centro,Media,Media,Promocional sensible
+C0029,43,23445,8,1786,Web,Sur,Media,Media,Promocional sensible
+C0030,42,53683,13,3264,App,Centro,Alta,Alta,Alto valor digital
+C0031,48,28735,6,1072,Telefono,Sur,Media,Alta,Ocasional presencial
+C0032,49,9475,1,631,Telefono,Centro,Media,Media,Cliente en riesgo
+C0033,60,14472,2,505,App,Norte,Baja,Baja,Cliente en riesgo
+C0034,37,50417,14,4170,Telefono,Centro,Alta,Alta,Alto valor digital
+C0035,37,48608,12,2048,App,Centro,Alta,Alta,Alto valor digital
+C0036,31,37997,16,2884,App,Centro,Media,Media,Alto valor digital
+C0037,45,27888,4,506,Web,Occidente,Media,Baja,Cliente en riesgo
+C0038,29,34302,19,3705,Tienda,Norte,Media,Media,Alto valor digital
+C0039,39,38426,15,2797,App,Norte,Alta,Alta,Alto valor digital
+C0040,40,32497,12,2670,Web,Sur,Alta,Alta,Promocional sensible
+C0041,26,51381,22,4899,App,Centro,Alta,Media,Alto valor digital
+C0042,40,32223,13,2468,Web,Norte,Alta,Baja,Promocional sensible
+C0043,39,26975,19,3788,Web,Occidente,Baja,Alta,Alto valor digital
+C0044,26,22967,13,1802,Web,Occidente,Media,Alta,Promocional sensible
+C0045,38,51857,12,3417,App,Norte,Media,Baja,Alto valor digital
+C0046,50,31882,10,2049,App,Sur,Alta,Media,Promocional sensible
+C0047,37,31722,5,1685,Web,Norte,Media,Alta,Promocional sensible
+C0048,59,16830,6,1243,Tienda,Centro,Media,Baja,Ocasional presencial
+C0049,34,24597,3,309,Telefono,Centro,Media,Baja,Cliente en riesgo
+C0050,26,23516,11,1796,Telefono,Centro,Alta,Alta,Promocional sensible
+C0051,26,8487,10,1507,Web,Centro,Alta,Alta,Promocional sensible
+C0052,53,54426,14,2244,App,Occidente,Alta,Alta,Alto valor digital
+C0053,36,22056,2,469,Telefono,Centro,Baja,Baja,Cliente en riesgo
+C0054,33,15194,8,1810,Tienda,Occidente,Media,Media,Promocional sensible
+C0055,31,18687,3,790,Web,Sur,Baja,Baja,Ocasional presencial
+C0056,33,19076,3,648,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0057,52,44200,19,3468,Web,Sur,Alta,Alta,Alto valor digital
+C0058,51,12184,1,1197,Tienda,Sur,Media,Alta,Ocasional presencial
+C0059,28,29021,8,1577,Tienda,Centro,Media,Alta,Promocional sensible
+C0060,32,28920,10,1233,App,Sur,Media,Baja,Promocional sensible
+C0061,36,16621,0,339,App,Sur,Baja,Baja,Cliente en riesgo
+C0062,30,30135,11,1772,App,Occidente,Media,Alta,Promocional sensible
+C0063,31,27190,10,1489,Web,Centro,Alta,Alta,Promocional sensible
+C0064,41,35094,12,2344,App,Centro,Alta,Baja,Alto valor digital
+C0065,43,24413,0,708,Web,Sur,Baja,Media,Cliente en riesgo
+C0066,45,26396,11,1913,App,Sur,Alta,Media,Promocional sensible
+C0067,49,29794,1,100,App,Occidente,Baja,Media,Cliente en riesgo
+C0068,29,15305,6,1069,Tienda,Sur,Alta,Alta,Ocasional presencial
+C0069,19,28980,12,2214,App,Sur,Media,Alta,Promocional sensible
+C0070,40,21910,8,820,Tienda,Centro,Media,Media,Ocasional presencial
+C0071,25,27196,11,2157,Tienda,Occidente,Alta,Alta,Promocional sensible
+C0072,26,17554,2,232,Web,Occidente,Baja,Alta,Cliente en riesgo
+C0073,33,31980,9,1062,Web,Sur,Alta,Media,Promocional sensible
+C0074,24,17589,8,1249,Tienda,Centro,Media,Alta,Promocional sensible
+C0075,37,18895,3,420,Tienda,Occidente,Media,Baja,Cliente en riesgo
+C0076,23,22900,9,1542,App,Centro,Media,Alta,Promocional sensible
+C0077,32,48093,15,2923,App,Occidente,Alta,Alta,Alto valor digital
+C0078,33,15932,1,814,Tienda,Centro,Baja,Media,Cliente en riesgo
+C0079,28,24925,5,1205,Web,Occidente,Media,Media,Promocional sensible
+C0080,37,24740,4,1070,Telefono,Centro,Baja,Media,Ocasional presencial
+C0081,36,28667,16,1446,App,Centro,Alta,Alta,Promocional sensible
+C0082,35,48416,16,2435,App,Centro,Media,Alta,Alto valor digital
+C0083,37,24772,2,473,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0084,23,31872,8,1677,Tienda,Centro,Alta,Alta,Promocional sensible
+C0085,33,24050,11,3351,App,Occidente,Baja,Alta,Alto valor digital
+C0086,21,21681,2,1144,Web,Centro,Media,Alta,Promocional sensible
+C0087,35,33506,14,3208,Tienda,Occidente,Alta,Media,Alto valor digital
+C0088,38,27518,8,613,App,Occidente,Alta,Media,Ocasional presencial
+C0089,34,29691,11,1324,Web,Centro,Baja,Media,Promocional sensible
+C0090,33,44744,20,3402,Web,Norte,Alta,Alta,Alto valor digital
+C0091,44,10988,3,971,Tienda,Centro,Alta,Baja,Ocasional presencial
+C0092,19,25460,1,659,Web,Occidente,Baja,Baja,Cliente en riesgo
+C0093,46,32181,10,2913,Tienda,Norte,Baja,Alta,Alto valor digital
+C0094,51,27434,11,1263,Tienda,Sur,Media,Alta,Promocional sensible
+C0095,20,55528,16,1200,Web,Occidente,Alta,Baja,Alto valor digital
+C0096,29,32848,16,3140,Tienda,Centro,Alta,Alta,Alto valor digital
+C0097,34,29699,7,1432,Tienda,Centro,Alta,Alta,Promocional sensible
+C0098,32,35243,15,3707,Web,Sur,Media,Media,Alto valor digital
+C0099,22,19877,11,1231,Tienda,Centro,Media,Alta,Promocional sensible
+C0100,33,13993,6,1441,Tienda,Centro,Media,Alta,Ocasional presencial
+C0101,27,28680,18,3860,App,Centro,Alta,Media,Alto valor digital
+C0102,47,41886,17,2465,App,Norte,Alta,Alta,Alto valor digital
+C0103,45,22657,7,432,Tienda,Centro,Media,Baja,Ocasional presencial
+C0104,40,19595,8,1545,Tienda,Centro,Media,Alta,Promocional sensible
+C0105,63,23071,3,679,Web,Sur,Baja,Media,Cliente en riesgo
+C0106,44,5000,2,456,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0107,18,23874,0,725,Tienda,Norte,Baja,Media,Cliente en riesgo
+C0108,63,20706,8,561,Tienda,Sur,Alta,Media,Ocasional presencial
+C0109,34,11543,12,1349,App,Centro,Media,Alta,Promocional sensible
+C0110,27,22286,10,846,Web,Centro,Media,Media,Promocional sensible
+C0111,55,21701,6,1397,Telefono,Sur,Media,Media,Ocasional presencial
+C0112,43,37755,8,1505,Web,Sur,Alta,Alta,Promocional sensible
+C0113,21,57964,15,2279,Web,Centro,Alta,Alta,Alto valor digital
+C0114,35,27943,10,2142,Telefono,Centro,Media,Alta,Promocional sensible
+C0115,18,11241,11,1843,Web,Sur,Media,Alta,Promocional sensible
+C0116,41,14043,4,631,Tienda,Sur,Alta,Media,Ocasional presencial
+C0117,69,22216,7,269,Tienda,Sur,Alta,Media,Ocasional presencial
+C0118,54,21749,5,1631,Tienda,Norte,Media,Media,Ocasional presencial
+C0119,37,10133,7,1037,Tienda,Centro,Media,Media,Ocasional presencial
+C0120,33,14470,1,609,Tienda,Norte,Media,Baja,Cliente en riesgo
+C0121,43,46263,9,2466,Web,Norte,Alta,Media,Alto valor digital
+C0122,38,25572,20,2237,App,Norte,Alta,Media,Alto valor digital
+C0123,50,22891,3,1257,Tienda,Norte,Media,Media,Ocasional presencial
+C0124,33,23060,9,506,App,Occidente,Media,Media,Promocional sensible
+C0125,40,25806,11,1318,App,Centro,Baja,Alta,Promocional sensible
+C0126,39,22414,6,631,Telefono,Sur,Baja,Baja,Ocasional presencial
+C0127,40,34234,10,1669,App,Centro,Alta,Media,Promocional sensible
+C0128,32,35243,21,2799,Web,Centro,Alta,Alta,Alto valor digital
+C0129,46,26564,2,100,Telefono,Centro,Media,Baja,Cliente en riesgo
+C0130,49,17045,9,875,Tienda,Centro,Baja,Media,Ocasional presencial
+C0131,37,42185,13,3297,App,Norte,Alta,Alta,Alto valor digital
+C0132,45,27365,5,1032,Tienda,Centro,Alta,Media,Ocasional presencial
+C0133,56,12701,5,867,Tienda,Centro,Media,Media,Ocasional presencial
+C0134,33,35159,12,4505,App,Norte,Alta,Baja,Alto valor digital
+C0135,28,25423,8,1165,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0136,46,11172,5,599,Telefono,Centro,Baja,Media,Cliente en riesgo
+C0137,18,24425,2,235,Web,Norte,Media,Alta,Cliente en riesgo
+C0138,26,27748,4,892,Web,Norte,Media,Media,Ocasional presencial
+C0139,44,48864,11,1637,App,Norte,Media,Alta,Alto valor digital
+C0140,22,12371,3,468,Web,Occidente,Media,Media,Ocasional presencial
+C0141,36,41847,15,2771,Tienda,Norte,Alta,Media,Alto valor digital
+C0142,40,36338,11,698,Web,Centro,Alta,Alta,Promocional sensible
+C0143,44,23880,2,1057,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0144,28,48756,17,3172,App,Occidente,Alta,Alta,Alto valor digital
+C0145,36,39753,13,4106,Web,Centro,Alta,Alta,Alto valor digital
+C0146,28,32711,7,2659,App,Centro,Media,Alta,Promocional sensible
+C0147,30,52324,14,3237,App,Occidente,Alta,Alta,Alto valor digital
+C0148,35,18275,6,563,Tienda,Sur,Media,Baja,Ocasional presencial
+C0149,24,36377,11,3474,Telefono,Norte,Baja,Media,Alto valor digital
+C0150,45,32817,11,1904,Tienda,Sur,Alta,Alta,Promocional sensible
+C0151,45,29943,15,1860,Tienda,Norte,Alta,Alta,Alto valor digital
+C0152,23,36617,10,662,App,Norte,Media,Alta,Promocional sensible
+C0153,43,52057,16,2326,Web,Centro,Alta,Media,Alto valor digital
+C0154,27,37164,9,3543,Telefono,Norte,Media,Alta,Alto valor digital
+C0155,25,36577,13,3348,App,Norte,Alta,Media,Alto valor digital
+C0156,42,48440,12,2577,Tienda,Occidente,Baja,Alta,Alto valor digital
+C0157,45,26104,5,471,Telefono,Sur,Alta,Baja,Ocasional presencial
+C0158,54,31158,12,3874,App,Norte,Alta,Alta,Alto valor digital
+C0159,22,23334,7,1231,App,Centro,Media,Alta,Promocional sensible
+C0160,33,34272,3,814,Tienda,Occidente,Baja,Alta,Promocional sensible
+C0161,32,21393,6,1454,Web,Sur,Alta,Baja,Ocasional presencial
+C0162,46,24293,11,2164,Web,Centro,Media,Media,Promocional sensible
+C0163,47,60811,6,3062,App,Centro,Alta,Media,Alto valor digital
+C0164,25,15884,5,1871,Tienda,Norte,Media,Alta,Promocional sensible
+C0165,64,15570,9,1004,Tienda,Occidente,Alta,Alta,Ocasional presencial
+C0166,54,14134,7,1311,Tienda,Sur,Media,Media,Ocasional presencial
+C0167,60,25734,2,332,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0168,52,46793,17,3190,Web,Centro,Alta,Media,Alto valor digital
+C0169,47,36242,6,1469,Tienda,Norte,Media,Media,Ocasional presencial
+C0170,18,5000,0,845,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0171,29,36853,15,2892,Web,Centro,Media,Alta,Alto valor digital
+C0172,33,28747,3,1190,Telefono,Sur,Media,Baja,Ocasional presencial
+C0173,54,20532,4,973,Tienda,Centro,Alta,Baja,Ocasional presencial
+C0174,42,20263,9,1349,Web,Centro,Media,Alta,Promocional sensible
+C0175,40,18991,0,415,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0176,39,28799,4,879,Tienda,Centro,Baja,Media,Ocasional presencial
+C0177,22,33855,10,729,Tienda,Centro,Media,Media,Promocional sensible
+C0178,27,20174,13,1377,Web,Occidente,Alta,Alta,Promocional sensible
+C0179,26,44775,15,3355,Tienda,Centro,Alta,Alta,Alto valor digital
+C0180,36,24313,11,1412,App,Sur,Media,Media,Promocional sensible
+C0181,40,54157,17,4303,App,Norte,Alta,Media,Alto valor digital
+C0182,52,12555,5,1082,App,Occidente,Media,Baja,Ocasional presencial
+C0183,59,22643,3,1179,Tienda,Sur,Baja,Media,Ocasional presencial
+C0184,37,22490,5,2056,Tienda,Sur,Media,Media,Promocional sensible
+C0185,37,20981,7,979,Web,Occidente,Media,Media,Ocasional presencial
+C0186,20,8698,7,975,Tienda,Sur,Media,Media,Ocasional presencial
+C0187,66,20304,2,1378,Tienda,Centro,Media,Media,Ocasional presencial
+C0188,42,17069,1,117,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0189,52,21512,1,1072,Tienda,Sur,Alta,Baja,Ocasional presencial
+C0190,56,18645,4,1118,Tienda,Centro,Baja,Baja,Ocasional presencial
+C0191,35,26603,5,1505,Web,Norte,Alta,Alta,Promocional sensible
+C0192,35,24231,9,1769,Web,Centro,Media,Media,Promocional sensible
+C0193,38,36954,12,3719,Web,Occidente,Alta,Media,Alto valor digital
+C0194,50,36488,11,1330,Tienda,Norte,Media,Alta,Promocional sensible
+C0195,49,21303,3,396,Telefono,Centro,Baja,Baja,Cliente en riesgo
+C0196,26,33375,8,1210,App,Centro,Media,Alta,Promocional sensible
+C0197,38,17077,4,930,App,Sur,Media,Alta,Promocional sensible
+C0198,45,21055,6,602,Tienda,Occidente,Media,Media,Ocasional presencial
+C0199,34,45310,12,2617,Tienda,Occidente,Alta,Media,Alto valor digital
+C0200,31,48586,18,2412,App,Norte,Alta,Alta,Alto valor digital
+C0201,51,7000,4,1429,Web,Centro,Baja,Baja,Ocasional presencial
+C0202,37,28893,10,3126,App,Occidente,Media,Media,Alto valor digital
+C0203,29,18572,3,266,Web,Sur,Media,Baja,Cliente en riesgo
+C0204,36,10875,9,1887,App,Norte,Media,Media,Promocional sensible
+C0205,26,11556,5,825,Telefono,Norte,Baja,Media,Cliente en riesgo
+C0206,63,18232,2,1107,Tienda,Sur,Baja,Media,Ocasional presencial
+C0207,39,25285,2,628,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0208,20,48947,19,2086,App,Occidente,Alta,Alta,Alto valor digital
+C0209,38,46948,13,2543,Telefono,Norte,Alta,Alta,Alto valor digital
+C0210,48,11235,7,1327,Tienda,Sur,Alta,Baja,Ocasional presencial
+C0211,18,21821,5,1481,Web,Sur,Baja,Baja,Promocional sensible
+C0212,33,14649,2,1462,Tienda,Sur,Baja,Media,Ocasional presencial
+C0213,40,16805,5,758,App,Centro,Alta,Media,Ocasional presencial
+C0214,51,18974,7,854,Tienda,Centro,Media,Baja,Ocasional presencial
+C0215,32,36701,3,1586,App,Norte,Media,Alta,Promocional sensible
+C0216,40,19241,9,1392,App,Occidente,Baja,Alta,Promocional sensible
+C0217,31,43432,18,3739,Web,Norte,Alta,Alta,Alto valor digital
+C0218,45,47668,16,3654,Web,Norte,Media,Baja,Alto valor digital
+C0219,58,32964,4,1452,App,Centro,Media,Baja,Ocasional presencial
+C0220,55,12894,5,1262,Tienda,Sur,Media,Media,Ocasional presencial
+C0221,68,16274,4,722,App,Norte,Media,Media,Ocasional presencial
+C0222,49,15879,11,1415,Telefono,Sur,Media,Alta,Promocional sensible
+C0223,39,16369,3,674,App,Centro,Baja,Baja,Cliente en riesgo
+C0224,29,24573,1,386,Web,Sur,Alta,Baja,Ocasional presencial
+C0225,39,50892,20,4522,App,Centro,Alta,Alta,Alto valor digital
+C0226,42,23945,2,555,Telefono,Norte,Media,Baja,Cliente en riesgo
+C0227,35,28917,8,1290,Web,Norte,Alta,Alta,Promocional sensible
+C0228,44,35149,11,1099,App,Centro,Alta,Alta,Promocional sensible
+C0229,51,35354,4,1867,App,Occidente,Media,Alta,Promocional sensible
+C0230,36,14948,2,600,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0231,40,21327,1,100,App,Sur,Baja,Baja,Cliente en riesgo
+C0232,40,26571,7,2490,App,Occidente,Alta,Media,Promocional sensible
+C0233,37,22039,9,900,Web,Sur,Media,Alta,Promocional sensible
+C0234,31,42631,12,3591,Tienda,Sur,Alta,Alta,Alto valor digital
+C0235,36,21513,4,1028,Web,Sur,Media,Baja,Ocasional presencial
+C0236,28,27720,9,1741,App,Centro,Alta,Alta,Promocional sensible
+C0237,50,24389,6,873,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0238,29,41195,16,3227,App,Norte,Alta,Baja,Alto valor digital
+C0239,44,26205,4,1064,App,Norte,Alta,Alta,Ocasional presencial
+C0240,30,38373,12,3961,Web,Norte,Alta,Alta,Alto valor digital
+C0241,45,46124,8,3355,App,Occidente,Alta,Media,Alto valor digital
+C0242,37,22643,4,638,Tienda,Centro,Media,Baja,Ocasional presencial
+C0243,42,36255,9,2455,App,Centro,Alta,Alta,Alto valor digital
+C0244,23,15864,6,1068,Web,Norte,Media,Alta,Promocional sensible
+C0245,36,34769,4,4513,App,Norte,Alta,Media,Alto valor digital
+C0246,24,40743,16,2710,Tienda,Sur,Alta,Alta,Alto valor digital
+C0247,18,19560,13,2149,Telefono,Norte,Media,Media,Promocional sensible
+C0248,30,10038,9,2059,App,Centro,Media,Alta,Promocional sensible
+C0249,49,24164,4,1351,Tienda,Sur,Alta,Baja,Ocasional presencial
+C0250,43,29130,1,513,Web,Norte,Media,Baja,Ocasional presencial
+C0251,30,22629,3,502,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0252,26,24895,3,1328,App,Centro,Media,Media,Promocional sensible
+C0253,63,18333,2,686,Tienda,Occidente,Media,Media,Ocasional presencial
+C0254,47,38927,13,4371,App,Sur,Alta,Alta,Alto valor digital
+C0255,26,45869,10,4288,Web,Occidente,Media,Alta,Alto valor digital
+C0256,42,22541,9,448,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0257,54,16566,0,591,App,Centro,Baja,Baja,Cliente en riesgo
+C0258,20,40792,14,4624,Web,Centro,Alta,Media,Alto valor digital
+C0259,26,30462,11,1885,Web,Occidente,Alta,Media,Promocional sensible
+C0260,26,22774,11,1413,Web,Centro,Media,Alta,Promocional sensible
+C0261,38,44381,5,3367,App,Norte,Alta,Baja,Alto valor digital
+C0262,31,17967,7,869,Web,Occidente,Media,Baja,Ocasional presencial
+C0263,39,51535,16,2644,App,Occidente,Alta,Media,Alto valor digital
+C0264,18,26829,9,1745,Web,Norte,Alta,Alta,Promocional sensible
+C0265,34,21537,8,719,Web,Occidente,Media,Baja,Ocasional presencial
+C0266,38,36130,17,2174,App,Centro,Alta,Alta,Alto valor digital
+C0267,49,27188,8,707,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0268,44,14389,2,616,Telefono,Occidente,Baja,Media,Cliente en riesgo
+C0269,39,58076,17,2511,App,Norte,Alta,Baja,Alto valor digital
+C0270,43,27304,8,1716,Web,Occidente,Media,Alta,Promocional sensible
+C0271,26,28191,11,1347,Telefono,Centro,Baja,Media,Promocional sensible
+C0272,56,19334,1,580,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0273,40,26520,8,1473,App,Norte,Alta,Alta,Promocional sensible
+C0274,30,24257,6,1264,Tienda,Centro,Media,Alta,Ocasional presencial
+C0275,45,26770,19,3134,Web,Norte,Baja,Baja,Alto valor digital
+C0276,55,20370,4,523,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0277,48,21065,15,2458,Tienda,Centro,Alta,Alta,Promocional sensible
+C0278,57,11414,1,1470,Tienda,Centro,Media,Media,Ocasional presencial
+C0279,46,23100,4,1255,App,Occidente,Media,Baja,Ocasional presencial
+C0280,53,17030,3,1017,Telefono,Centro,Media,Baja,Ocasional presencial
+C0281,40,21781,9,644,Tienda,Centro,Baja,Alta,Promocional sensible
+C0282,52,7155,4,1531,Tienda,Centro,Media,Baja,Ocasional presencial
+C0283,28,13608,3,329,Web,Sur,Baja,Media,Cliente en riesgo
+C0284,57,16505,3,1273,Tienda,Centro,Alta,Media,Ocasional presencial
+C0285,53,26586,6,1426,Telefono,Norte,Media,Baja,Ocasional presencial
+C0286,29,20055,3,516,Telefono,Norte,Baja,Baja,Cliente en riesgo
+C0287,29,15305,11,1645,Web,Centro,Alta,Alta,Promocional sensible
+C0288,37,50363,8,1859,App,Norte,Alta,Media,Alto valor digital
+C0289,40,14170,6,2000,Tienda,Sur,Media,Media,Ocasional presencial
+C0290,47,27492,3,1098,Web,Sur,Baja,Alta,Ocasional presencial
+C0291,58,25035,6,510,Tienda,Sur,Media,Media,Ocasional presencial
+C0292,23,24852,8,2724,App,Centro,Media,Alta,Promocional sensible
+C0293,47,24279,5,962,Web,Occidente,Media,Media,Ocasional presencial
+C0294,37,22423,2,395,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0295,36,18312,20,1599,Web,Sur,Media,Alta,Promocional sensible
+C0296,19,29193,7,2049,App,Centro,Media,Alta,Promocional sensible
+C0297,48,57867,16,3953,Web,Centro,Alta,Baja,Alto valor digital
+C0298,26,44091,18,2642,Tienda,Centro,Alta,Alta,Alto valor digital
+C0299,40,22632,4,847,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0300,30,48214,13,3784,Web,Centro,Media,Alta,Alto valor digital
+C0301,30,21608,3,1587,App,Sur,Media,Media,Ocasional presencial
+C0302,49,21546,4,502,Tienda,Centro,Baja,Media,Cliente en riesgo
+C0303,51,17845,5,711,Tienda,Norte,Baja,Alta,Ocasional presencial
+C0304,39,25654,11,2227,App,Norte,Media,Media,Promocional sensible
+C0305,31,15801,1,473,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0306,36,27003,4,1161,Tienda,Norte,Media,Baja,Ocasional presencial
+C0307,48,26647,2,1382,App,Centro,Alta,Media,Ocasional presencial
+C0308,25,27682,2,338,Telefono,Norte,Media,Baja,Cliente en riesgo
+C0309,52,13540,8,1842,App,Norte,Baja,Media,Ocasional presencial
+C0310,44,48110,12,3660,App,Centro,Media,Baja,Alto valor digital
+C0311,38,42407,8,4029,Web,Centro,Alta,Media,Alto valor digital
+C0312,40,25587,10,1610,Tienda,Occidente,Media,Alta,Promocional sensible
+C0313,57,12313,3,891,App,Norte,Alta,Alta,Ocasional presencial
+C0314,37,18690,9,1001,Web,Centro,Media,Alta,Promocional sensible
+C0315,36,53633,8,2091,App,Norte,Alta,Media,Alto valor digital
+C0316,45,34047,4,397,Telefono,Centro,Media,Media,Ocasional presencial
+C0317,34,27637,12,1166,Web,Sur,Baja,Alta,Promocional sensible
+C0318,34,26451,6,2254,Web,Centro,Media,Alta,Promocional sensible
+C0319,23,67294,10,2977,Telefono,Norte,Alta,Alta,Alto valor digital
+C0320,30,29004,9,1568,Tienda,Centro,Media,Alta,Promocional sensible
+C0321,49,19766,5,1086,Telefono,Occidente,Baja,Media,Ocasional presencial
+C0322,37,51353,16,3845,App,Norte,Media,Baja,Alto valor digital
+C0323,44,20071,3,842,Web,Centro,Media,Alta,Ocasional presencial
+C0324,28,10758,1,308,Web,Occidente,Baja,Baja,Cliente en riesgo
+C0325,34,24341,4,250,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0326,29,21306,8,2053,App,Centro,Media,Alta,Promocional sensible
+C0327,33,43939,7,3612,App,Centro,Alta,Media,Alto valor digital
+C0328,43,21256,2,825,Tienda,Occidente,Baja,Alta,Cliente en riesgo
+C0329,26,56717,11,2569,App,Norte,Alta,Media,Alto valor digital
+C0330,36,48745,17,3369,App,Centro,Alta,Alta,Alto valor digital
+C0331,42,27040,2,317,App,Sur,Baja,Baja,Ocasional presencial
+C0332,35,17631,4,770,Tienda,Occidente,Baja,Baja,Ocasional presencial
+C0333,42,17470,6,1340,Tienda,Occidente,Media,Media,Ocasional presencial
+C0334,30,9562,10,3124,Telefono,Centro,Baja,Alta,Promocional sensible
+C0335,28,26557,4,1431,Tienda,Centro,Media,Alta,Promocional sensible
+C0336,55,25744,3,767,Tienda,Norte,Baja,Media,Ocasional presencial
+C0337,41,26259,7,1115,App,Centro,Media,Media,Ocasional presencial
+C0338,39,42808,13,2196,App,Sur,Alta,Media,Alto valor digital
+C0339,29,46095,11,2911,Web,Norte,Alta,Alta,Alto valor digital
+C0340,24,7386,1,553,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0341,31,22226,5,1461,App,Norte,Media,Alta,Promocional sensible
+C0342,47,23242,5,750,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0343,37,38118,13,2080,Web,Norte,Media,Media,Alto valor digital
+C0344,32,23173,9,1698,App,Norte,Alta,Media,Promocional sensible
+C0345,35,33640,14,1866,Web,Occidente,Alta,Alta,Alto valor digital
+C0346,20,26264,9,1757,Telefono,Occidente,Alta,Alta,Promocional sensible
+C0347,27,25065,11,898,App,Occidente,Baja,Alta,Promocional sensible
+C0348,42,16561,3,845,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0349,75,24883,5,528,App,Occidente,Baja,Alta,Ocasional presencial
+C0350,49,50054,6,2910,App,Centro,Alta,Alta,Alto valor digital
+C0351,41,23761,9,1235,App,Centro,Baja,Alta,Ocasional presencial
+C0352,52,30903,11,4072,App,Centro,Alta,Alta,Alto valor digital
+C0353,48,36550,7,3901,App,Norte,Alta,Media,Alto valor digital
+C0354,41,7137,1,454,Telefono,Sur,Alta,Baja,Cliente en riesgo
+C0355,29,28517,6,1732,Web,Occidente,Media,Alta,Promocional sensible
+C0356,40,13567,7,951,Tienda,Centro,Alta,Baja,Ocasional presencial
+C0357,29,21667,8,457,Tienda,Sur,Media,Media,Ocasional presencial
+C0358,32,40305,13,4172,App,Occidente,Alta,Baja,Alto valor digital
+C0359,42,12199,12,1003,App,Centro,Media,Media,Promocional sensible
+C0360,41,18003,3,426,App,Occidente,Baja,Media,Cliente en riesgo
+C0361,29,26238,8,1451,App,Sur,Alta,Alta,Promocional sensible
+C0362,60,25130,3,1120,Tienda,Sur,Media,Alta,Ocasional presencial
+C0363,19,19059,1,421,Tienda,Centro,Media,Baja,Cliente en riesgo
+C0364,53,20130,1,786,Tienda,Occidente,Media,Media,Ocasional presencial
+C0365,35,13229,15,712,Web,Centro,Alta,Alta,Promocional sensible
+C0366,35,23490,5,820,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0367,26,33223,16,974,Tienda,Occidente,Alta,Media,Promocional sensible
+C0368,35,18148,9,2038,Web,Sur,Media,Media,Promocional sensible
+C0369,54,23419,20,4509,App,Centro,Alta,Baja,Alto valor digital
+C0370,20,37690,11,917,App,Sur,Media,Alta,Promocional sensible
+C0371,27,25001,9,889,Web,Norte,Media,Alta,Promocional sensible
+C0372,59,20683,3,1023,Tienda,Sur,Media,Baja,Ocasional presencial
+C0373,18,34887,5,1287,Tienda,Norte,Alta,Media,Promocional sensible
+C0374,42,25082,4,659,Tienda,Sur,Media,Media,Ocasional presencial
+C0375,60,19216,2,145,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0376,41,13236,3,713,App,Sur,Media,Media,Ocasional presencial
+C0377,41,16220,1,708,App,Centro,Media,Baja,Cliente en riesgo
+C0378,45,34653,16,3341,Web,Occidente,Baja,Alta,Alto valor digital
+C0379,23,13298,10,1406,Web,Centro,Media,Media,Promocional sensible
+C0380,41,19692,5,975,Tienda,Sur,Media,Media,Ocasional presencial
+C0381,30,28996,7,973,Tienda,Centro,Media,Baja,Ocasional presencial
+C0382,49,20051,2,394,Telefono,Occidente,Alta,Baja,Cliente en riesgo
+C0383,41,14927,5,725,App,Norte,Baja,Baja,Ocasional presencial
+C0384,31,16266,2,684,Web,Centro,Baja,Baja,Cliente en riesgo
+C0385,26,54775,12,2578,App,Occidente,Baja,Alta,Alto valor digital
+C0386,42,28650,8,1166,Tienda,Norte,Media,Baja,Ocasional presencial
+C0387,63,24214,2,341,Tienda,Sur,Alta,Baja,Cliente en riesgo
+C0388,27,28282,10,1464,Tienda,Sur,Media,Media,Promocional sensible
+C0389,21,13773,11,1809,Web,Centro,Media,Media,Promocional sensible
+C0390,25,43271,4,3766,App,Norte,Alta,Alta,Alto valor digital
+C0391,36,7000,6,787,Tienda,Norte,Alta,Media,Ocasional presencial
+C0392,38,21468,8,1346,App,Centro,Media,Baja,Ocasional presencial
+C0393,38,45136,14,2728,App,Occidente,Alta,Baja,Alto valor digital
+C0394,26,13050,6,436,Telefono,Sur,Media,Media,Ocasional presencial
+C0395,29,19810,1,783,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0396,24,18422,7,965,Telefono,Centro,Media,Alta,Promocional sensible
+C0397,30,25276,7,604,Telefono,Centro,Baja,Baja,Ocasional presencial
+C0398,37,23478,9,1311,App,Centro,Media,Alta,Promocional sensible
+C0399,20,26383,11,1484,Web,Norte,Baja,Alta,Promocional sensible
+C0400,31,17403,10,1467,Web,Centro,Media,Media,Promocional sensible
+C0401,56,28928,5,625,Tienda,Sur,Alta,Alta,Ocasional presencial
+C0402,41,37563,8,3519,App,Norte,Alta,Alta,Alto valor digital
+C0403,39,34770,16,3326,Web,Norte,Media,Media,Alto valor digital
+C0404,68,27786,3,836,Web,Sur,Alta,Media,Ocasional presencial
+C0405,18,26649,14,1480,Web,Norte,Media,Alta,Promocional sensible
+C0406,36,11355,1,250,App,Sur,Media,Baja,Cliente en riesgo
+C0407,46,20609,1,617,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0408,34,44664,21,2787,Tienda,Occidente,Alta,Media,Alto valor digital
+C0409,50,20546,6,1186,App,Occidente,Media,Media,Promocional sensible
+C0410,44,21155,1,463,Telefono,Occidente,Baja,Baja,Cliente en riesgo
+C0411,29,51042,9,2464,Telefono,Centro,Alta,Media,Alto valor digital
+C0412,49,10987,0,285,Telefono,Occidente,Media,Media,Cliente en riesgo
+C0413,34,58088,11,3607,Web,Occidente,Alta,Alta,Alto valor digital
+C0414,46,40561,7,2953,App,Norte,Alta,Alta,Alto valor digital
+C0415,75,16643,4,1191,Tienda,Centro,Media,Alta,Ocasional presencial
+C0416,57,30477,5,809,Tienda,Norte,Media,Baja,Ocasional presencial
+C0417,30,19388,4,1647,Web,Norte,Media,Alta,Promocional sensible
+C0418,33,16042,19,1388,App,Norte,Baja,Alta,Promocional sensible
+C0419,36,49204,8,3470,App,Centro,Alta,Alta,Alto valor digital
+C0420,20,55768,16,2454,App,Norte,Alta,Baja,Alto valor digital
+C0421,43,21370,16,2401,Web,Centro,Baja,Alta,Promocional sensible
+C0422,31,23390,6,1279,Tienda,Sur,Media,Alta,Promocional sensible
+C0423,28,35047,2,1042,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0424,36,20256,7,1156,Tienda,Centro,Media,Alta,Promocional sensible
+C0425,33,39580,15,3099,App,Centro,Alta,Media,Alto valor digital
+C0426,31,21620,3,806,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0427,43,31628,6,708,App,Sur,Alta,Alta,Ocasional presencial
+C0428,40,12157,5,1204,Tienda,Centro,Media,Alta,Ocasional presencial
+C0429,28,24310,13,1122,App,Centro,Alta,Alta,Promocional sensible
+C0430,55,24525,3,1047,Tienda,Norte,Alta,Baja,Ocasional presencial
+C0431,40,19784,5,845,Tienda,Norte,Media,Baja,Ocasional presencial
+C0432,24,43831,17,3495,App,Centro,Alta,Alta,Alto valor digital
+C0433,60,32528,5,799,App,Occidente,Baja,Baja,Ocasional presencial
+C0434,43,27214,9,3346,App,Norte,Baja,Baja,Alto valor digital
+C0435,52,26692,4,840,App,Occidente,Baja,Baja,Ocasional presencial
+C0436,40,59720,16,2813,Web,Centro,Alta,Alta,Alto valor digital
+C0437,32,10459,3,1555,Tienda,Centro,Baja,Baja,Ocasional presencial
+C0438,27,35005,9,1551,Tienda,Centro,Baja,Media,Ocasional presencial
+C0439,35,49380,10,2542,App,Sur,Alta,Media,Alto valor digital
+C0440,55,21351,3,1085,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0441,29,41204,16,2998,Telefono,Occidente,Media,Alta,Alto valor digital
+C0442,33,12312,2,618,Telefono,Centro,Baja,Baja,Cliente en riesgo
+C0443,49,55460,14,2819,App,Centro,Alta,Media,Alto valor digital
+C0444,27,20910,6,1462,App,Centro,Alta,Alta,Promocional sensible
+C0445,37,25047,6,934,Web,Sur,Media,Media,Ocasional presencial
+C0446,58,17685,3,482,Tienda,Sur,Media,Media,Ocasional presencial
+C0447,21,25878,5,549,Telefono,Norte,Baja,Media,Ocasional presencial
+C0448,39,37006,3,1180,Web,Centro,Baja,Baja,Ocasional presencial
+C0449,47,25561,6,1203,Telefono,Occidente,Media,Media,Ocasional presencial
+C0450,48,17201,2,405,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0451,25,26261,7,1377,Web,Norte,Media,Alta,Promocional sensible
+C0452,39,23352,8,1586,Web,Sur,Baja,Media,Promocional sensible
+C0453,43,17217,2,757,Tienda,Sur,Baja,Alta,Ocasional presencial
+C0454,44,33482,8,2518,App,Centro,Alta,Media,Alto valor digital
+C0455,53,10415,6,1513,App,Occidente,Media,Baja,Ocasional presencial
+C0456,32,21765,2,370,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0457,44,35391,12,3724,App,Centro,Alta,Media,Alto valor digital
+C0458,58,39647,17,3511,App,Sur,Alta,Alta,Alto valor digital
+C0459,38,56025,12,3891,Web,Occidente,Alta,Media,Alto valor digital
+C0460,46,23441,0,486,Tienda,Occidente,Baja,Media,Cliente en riesgo
+C0461,22,55636,7,2783,App,Centro,Alta,Alta,Alto valor digital
+C0462,42,15364,4,366,App,Sur,Baja,Baja,Cliente en riesgo
+C0463,28,32549,11,3206,App,Centro,Alta,Media,Alto valor digital
+C0464,21,14887,10,1336,Web,Occidente,Alta,Media,Promocional sensible
+C0465,35,6052,3,267,Web,Occidente,Media,Baja,Cliente en riesgo
+C0466,47,46385,21,3506,App,Centro,Alta,Baja,Alto valor digital
+C0467,40,44882,15,3310,Web,Norte,Alta,Alta,Alto valor digital
+C0468,49,28388,5,1259,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0469,27,36021,19,3434,Web,Norte,Alta,Media,Alto valor digital
+C0470,42,40102,10,2978,Web,Norte,Alta,Alta,Alto valor digital
+C0471,29,18439,2,155,App,Centro,Media,Baja,Cliente en riesgo
+C0472,58,9278,2,623,Web,Centro,Media,Baja,Cliente en riesgo
+C0473,57,21616,5,1452,Tienda,Norte,Media,Media,Ocasional presencial
+C0474,39,25360,4,589,Telefono,Sur,Baja,Alta,Cliente en riesgo
+C0475,37,13452,8,1318,Tienda,Norte,Media,Baja,Ocasional presencial
+C0476,20,24372,10,2162,Web,Centro,Media,Alta,Promocional sensible
+C0477,53,19609,5,894,Web,Sur,Media,Media,Ocasional presencial
+C0478,22,29073,12,2051,App,Centro,Alta,Media,Promocional sensible
+C0479,31,40381,11,5245,Tienda,Sur,Alta,Alta,Alto valor digital
+C0480,39,18379,4,723,App,Sur,Baja,Baja,Cliente en riesgo
+C0481,23,9961,2,357,Web,Sur,Baja,Baja,Cliente en riesgo
+C0482,28,11663,5,825,App,Sur,Baja,Baja,Ocasional presencial
+C0483,37,20408,2,520,Tienda,Centro,Baja,Baja,Cliente en riesgo
+C0484,21,32166,9,828,Telefono,Centro,Media,Alta,Promocional sensible
+C0485,24,24965,3,631,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0486,22,15386,1,604,App,Centro,Baja,Baja,Cliente en riesgo
+C0487,30,7000,5,250,Tienda,Sur,Baja,Baja,Ocasional presencial
+C0488,42,27299,13,3440,App,Norte,Alta,Alta,Alto valor digital
+C0489,35,42916,15,2994,Telefono,Norte,Alta,Alta,Alto valor digital
+C0490,22,19396,11,1913,Web,Sur,Baja,Alta,Promocional sensible
+C0491,31,22576,8,1724,App,Sur,Baja,Alta,Promocional sensible
+C0492,64,16020,6,1170,App,Sur,Baja,Media,Ocasional presencial
+C0493,32,27767,9,1213,Web,Centro,Alta,Alta,Alto valor digital
+C0494,42,16527,2,1472,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0495,39,50858,11,3131,Web,Sur,Alta,Media,Alto valor digital
+C0496,35,23470,6,745,Telefono,Occidente,Alta,Alta,Ocasional presencial
+C0497,49,16837,2,613,Tienda,Centro,Media,Media,Ocasional presencial
+C0498,36,42391,15,3192,Web,Occidente,Alta,Alta,Alto valor digital
+C0499,20,31890,5,1443,Tienda,Centro,Media,Alta,Promocional sensible
+C0500,58,11412,2,481,Tienda,Occidente,Media,Baja,Cliente en riesgo
+C0501,28,19180,9,1010,Web,Sur,Media,Baja,Promocional sensible
+C0502,29,49165,17,2892,App,Centro,Alta,Alta,Alto valor digital
+C0503,39,51530,11,2979,Telefono,Sur,Media,Alta,Alto valor digital
+C0504,32,15260,7,1803,App,Occidente,Alta,Baja,Promocional sensible
+C0505,37,43253,7,1208,Tienda,Centro,Alta,Alta,Promocional sensible
+C0506,56,16532,3,942,Tienda,Centro,Media,Media,Ocasional presencial
+C0507,43,13126,1,681,Web,Sur,Media,Media,Cliente en riesgo
+C0508,28,40050,12,4347,App,Sur,Media,Alta,Alto valor digital
+C0509,34,55149,15,3532,Web,Occidente,Media,Media,Alto valor digital
+C0510,34,27666,9,1527,Web,Norte,Media,Alta,Promocional sensible
+C0511,46,13024,8,887,Tienda,Centro,Alta,Alta,Promocional sensible
+C0512,25,27751,6,1383,Web,Centro,Media,Alta,Promocional sensible
+C0513,47,17788,0,608,Web,Sur,Baja,Baja,Cliente en riesgo
+C0514,28,5824,4,745,Telefono,Centro,Baja,Media,Cliente en riesgo
+C0515,58,20919,4,338,Tienda,Sur,Alta,Media,Ocasional presencial
+C0516,50,31451,4,996,Tienda,Occidente,Media,Media,Ocasional presencial
+C0517,32,15137,14,1118,Telefono,Norte,Media,Alta,Promocional sensible
+C0518,28,16039,4,458,App,Occidente,Media,Media,Cliente en riesgo
+C0519,66,5973,5,703,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0520,18,27663,7,1532,Tienda,Centro,Media,Alta,Promocional sensible
+C0521,46,20966,6,768,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0522,36,27249,11,2864,Web,Sur,Alta,Alta,Alto valor digital
+C0523,27,28626,7,301,Tienda,Norte,Alta,Media,Ocasional presencial
+C0524,21,31016,7,1842,App,Centro,Media,Alta,Promocional sensible
+C0525,58,23275,7,1457,Tienda,Centro,Baja,Media,Ocasional presencial
+C0526,36,47667,13,3939,Web,Sur,Media,Media,Alto valor digital
+C0527,48,14074,1,390,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0528,38,29015,18,2241,App,Norte,Alta,Media,Alto valor digital
+C0529,38,38817,14,2724,App,Centro,Media,Alta,Alto valor digital
+C0530,42,49793,12,3202,Web,Centro,Alta,Media,Alto valor digital
+C0531,30,11550,10,959,Web,Centro,Media,Alta,Promocional sensible
+C0532,51,21388,4,898,Tienda,Occidente,Media,Media,Ocasional presencial
+C0533,28,18461,2,419,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0534,42,48144,13,2685,App,Norte,Alta,Alta,Alto valor digital
+C0535,33,33578,15,1648,App,Occidente,Media,Alta,Promocional sensible
+C0536,20,34896,4,2804,App,Centro,Alta,Alta,Alto valor digital
+C0537,54,29610,7,1061,Tienda,Centro,Baja,Media,Ocasional presencial
+C0538,33,47712,11,1758,App,Norte,Alta,Alta,Alto valor digital
+C0539,35,25071,15,3556,App,Centro,Alta,Alta,Alto valor digital
+C0540,37,32451,9,3149,App,Centro,Alta,Alta,Alto valor digital
+C0541,47,17823,3,624,Tienda,Norte,Alta,Baja,Ocasional presencial
+C0542,28,45263,12,2790,App,Norte,Alta,Alta,Alto valor digital
+C0543,55,24258,5,1129,Tienda,Sur,Alta,Media,Ocasional presencial
+C0544,26,28860,3,621,Web,Sur,Baja,Media,Cliente en riesgo
+C0545,33,21998,3,493,Web,Centro,Baja,Baja,Cliente en riesgo
+C0546,35,15343,0,362,Telefono,Centro,Baja,Baja,Cliente en riesgo
+C0547,25,34211,7,968,App,Centro,Media,Alta,Promocional sensible
+C0548,35,70936,15,3122,Web,Occidente,Media,Alta,Alto valor digital
+C0549,26,12430,2,784,Web,Occidente,Baja,Media,Cliente en riesgo
+C0550,30,53619,11,3940,Tienda,Centro,Alta,Alta,Alto valor digital
+C0551,36,29341,11,4492,App,Sur,Alta,Media,Alto valor digital
+C0552,18,16824,13,1040,Tienda,Sur,Media,Alta,Promocional sensible
+C0553,53,26484,3,250,Web,Centro,Media,Alta,Ocasional presencial
+C0554,43,16836,5,1461,App,Norte,Alta,Baja,Ocasional presencial
+C0555,33,23548,7,924,Tienda,Centro,Media,Media,Ocasional presencial
+C0556,19,21559,13,2157,Tienda,Centro,Media,Alta,Promocional sensible
+C0557,31,53434,9,2243,App,Norte,Alta,Baja,Alto valor digital
+C0558,39,58403,11,3676,App,Norte,Alta,Baja,Alto valor digital
+C0559,31,21468,9,1884,Tienda,Occidente,Alta,Media,Promocional sensible
+C0560,22,19715,11,1855,App,Sur,Media,Alta,Promocional sensible
+C0561,43,14867,2,710,Telefono,Norte,Baja,Baja,Cliente en riesgo
+C0562,29,42003,10,3306,App,Centro,Alta,Alta,Alto valor digital
+C0563,21,28964,7,2084,App,Norte,Media,Baja,Promocional sensible
+C0564,40,53289,17,3016,App,Occidente,Alta,Media,Alto valor digital
+C0565,59,23635,2,600,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0566,45,42972,17,3129,Web,Occidente,Alta,Alta,Alto valor digital
+C0567,36,29002,1,337,Telefono,Norte,Baja,Baja,Cliente en riesgo
+C0568,48,12253,8,886,Tienda,Norte,Alta,Media,Ocasional presencial
+C0569,20,29224,10,1527,Telefono,Centro,Baja,Media,Promocional sensible
+C0570,60,20775,5,1096,Web,Occidente,Media,Baja,Ocasional presencial
+C0571,24,15705,12,2084,App,Sur,Media,Alta,Promocional sensible
+C0572,43,39358,12,3650,App,Norte,Media,Alta,Alto valor digital
+C0573,48,16623,5,752,Tienda,Sur,Baja,Media,Ocasional presencial
+C0574,29,33121,9,1044,Tienda,Norte,Media,Media,Promocional sensible
+C0575,31,20277,4,966,Tienda,Sur,Alta,Media,Ocasional presencial
+C0576,45,15187,3,753,Tienda,Centro,Media,Media,Ocasional presencial
+C0577,28,19556,2,854,Web,Norte,Media,Alta,Promocional sensible
+C0578,35,26695,3,323,Tienda,Occidente,Alta,Media,Ocasional presencial
+C0579,33,15716,2,535,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0580,25,16873,7,1858,Tienda,Centro,Media,Alta,Promocional sensible
+C0581,31,23684,2,778,Telefono,Centro,Media,Baja,Cliente en riesgo
+C0582,20,54494,17,1540,App,Occidente,Alta,Alta,Alto valor digital
+C0583,43,38090,15,1273,App,Centro,Media,Alta,Alto valor digital
+C0584,75,22348,5,599,Tienda,Norte,Media,Media,Ocasional presencial
+C0585,36,23788,8,623,App,Centro,Media,Media,Promocional sensible
+C0586,21,34500,2,626,App,Centro,Media,Alta,Promocional sensible
+C0587,27,40982,11,981,Tienda,Occidente,Media,Alta,Promocional sensible
+C0588,39,45139,16,3454,App,Centro,Alta,Alta,Alto valor digital
+C0589,48,20473,6,1565,App,Sur,Baja,Media,Ocasional presencial
+C0590,63,22033,5,339,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0591,29,25833,5,1127,Web,Norte,Baja,Media,Ocasional presencial
+C0592,27,32077,4,1120,App,Norte,Media,Media,Ocasional presencial
+C0593,50,9986,1,387,App,Centro,Media,Baja,Cliente en riesgo
+C0594,18,9616,12,1426,Web,Centro,Media,Alta,Promocional sensible
+C0595,31,31584,2,403,Tienda,Centro,Media,Baja,Cliente en riesgo
+C0596,29,24216,1,478,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0597,36,30033,4,443,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0598,19,7964,4,418,Tienda,Occidente,Baja,Baja,Cliente en riesgo
+C0599,51,24111,6,982,Web,Sur,Media,Alta,Ocasional presencial
+C0600,46,32992,4,543,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0601,28,25170,3,853,Web,Norte,Baja,Media,Cliente en riesgo
+C0602,44,9110,3,100,Telefono,Norte,Media,Baja,Cliente en riesgo
+C0603,49,23647,5,1138,Tienda,Centro,Media,Alta,Ocasional presencial
+C0604,43,24747,0,450,Telefono,Sur,Baja,Media,Cliente en riesgo
+C0605,40,20816,9,1303,Web,Occidente,Alta,Media,Promocional sensible
+C0606,44,31803,11,1509,Tienda,Centro,Alta,Alta,Promocional sensible
+C0607,45,39031,12,2015,App,Norte,Alta,Alta,Alto valor digital
+C0608,35,23280,6,1636,Web,Norte,Alta,Alta,Promocional sensible
+C0609,40,38902,18,2291,App,Occidente,Alta,Alta,Alto valor digital
+C0610,52,28708,3,576,Web,Occidente,Alta,Baja,Ocasional presencial
+C0611,53,14297,5,1447,Tienda,Sur,Media,Media,Ocasional presencial
+C0612,36,13597,6,396,Telefono,Occidente,Alta,Baja,Cliente en riesgo
+C0613,53,22963,8,875,Tienda,Centro,Baja,Media,Ocasional presencial
+C0614,57,7789,1,840,Web,Sur,Baja,Baja,Cliente en riesgo
+C0615,44,48811,9,3863,Tienda,Norte,Media,Alta,Alto valor digital
+C0616,64,17751,4,1376,Tienda,Occidente,Baja,Baja,Ocasional presencial
+C0617,31,18223,9,1423,Web,Occidente,Media,Alta,Promocional sensible
+C0618,38,26414,9,1117,App,Occidente,Media,Media,Promocional sensible
+C0619,40,20162,10,901,Tienda,Centro,Alta,Media,Promocional sensible
+C0620,50,22344,13,2158,Web,Centro,Alta,Media,Promocional sensible
+C0621,51,11558,2,1588,Tienda,Occidente,Alta,Media,Ocasional presencial
+C0622,51,24048,10,1437,Tienda,Occidente,Media,Baja,Promocional sensible
+C0623,30,21137,7,1822,App,Occidente,Media,Alta,Promocional sensible
+C0624,32,15290,14,1361,Tienda,Sur,Media,Alta,Promocional sensible
+C0625,44,30714,5,1115,App,Sur,Media,Baja,Ocasional presencial
+C0626,68,17869,1,446,App,Sur,Media,Baja,Cliente en riesgo
+C0627,38,13690,9,1033,Web,Centro,Media,Alta,Promocional sensible
+C0628,34,12098,4,1389,Web,Norte,Media,Media,Ocasional presencial
+C0629,30,54559,15,3665,Web,Norte,Alta,Alta,Alto valor digital
+C0630,35,19312,3,772,App,Norte,Media,Alta,Ocasional presencial
+C0631,58,19992,6,613,Tienda,Sur,Media,Media,Ocasional presencial
+C0632,45,14824,5,890,Web,Norte,Alta,Alta,Ocasional presencial
+C0633,50,13080,2,1323,App,Norte,Media,Media,Ocasional presencial
+C0634,40,26020,11,983,Web,Norte,Media,Alta,Promocional sensible
+C0635,36,26016,1,153,Tienda,Norte,Media,Baja,Cliente en riesgo
+C0636,45,51050,14,2165,Web,Centro,Media,Media,Alto valor digital
+C0637,39,18725,6,910,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0638,30,17578,1,214,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0639,44,35271,10,3197,App,Occidente,Baja,Alta,Alto valor digital
+C0640,31,27650,15,1697,Web,Centro,Media,Alta,Promocional sensible
+C0641,39,44581,13,2786,App,Centro,Alta,Alta,Alto valor digital
+C0642,39,30433,11,1377,Web,Centro,Baja,Alta,Promocional sensible
+C0643,36,19943,15,2622,Web,Norte,Alta,Alta,Alto valor digital
+C0644,45,56365,11,4166,App,Centro,Baja,Baja,Alto valor digital
+C0645,51,34302,1,506,Tienda,Centro,Baja,Media,Ocasional presencial
+C0646,24,29586,10,1843,App,Occidente,Alta,Alta,Promocional sensible
+C0647,29,42648,18,3342,Web,Norte,Alta,Alta,Alto valor digital
+C0648,39,20722,7,1316,Tienda,Norte,Baja,Alta,Ocasional presencial
+C0649,49,15275,7,250,Tienda,Occidente,Alta,Baja,Ocasional presencial
+C0650,33,41784,18,3112,App,Norte,Alta,Alta,Alto valor digital
+C0651,29,50866,11,1696,Telefono,Centro,Alta,Alta,Alto valor digital
+C0652,31,18148,9,1805,Tienda,Sur,Media,Alta,Promocional sensible
+C0653,26,27752,3,1556,Web,Centro,Media,Alta,Promocional sensible
+C0654,51,26386,5,585,Tienda,Centro,Alta,Media,Ocasional presencial
+C0655,34,9740,6,476,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0656,38,33437,17,4329,App,Centro,Alta,Alta,Alto valor digital
+C0657,33,8000,12,2010,App,Norte,Alta,Media,Promocional sensible
+C0658,40,48858,11,3078,App,Norte,Alta,Alta,Alto valor digital
+C0659,59,16293,3,479,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0660,46,20302,11,886,Tienda,Centro,Baja,Alta,Ocasional presencial
+C0661,31,14814,13,557,App,Norte,Alta,Alta,Promocional sensible
+C0662,30,20229,6,683,Tienda,Occidente,Baja,Baja,Ocasional presencial
+C0663,25,22622,4,739,Web,Norte,Media,Media,Ocasional presencial
+C0664,43,26252,6,1282,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0665,32,35521,7,1434,Web,Occidente,Media,Alta,Promocional sensible
+C0666,27,28584,15,4091,Web,Occidente,Alta,Media,Alto valor digital
+C0667,36,53110,17,2646,Telefono,Centro,Media,Baja,Alto valor digital
+C0668,29,34128,18,2120,App,Sur,Alta,Media,Alto valor digital
+C0669,36,18563,7,1145,App,Sur,Media,Media,Ocasional presencial
+C0670,49,10772,5,462,Tienda,Sur,Alta,Baja,Cliente en riesgo
+C0671,42,18241,7,479,Tienda,Sur,Media,Baja,Ocasional presencial
+C0672,41,36836,19,3274,Web,Norte,Media,Alta,Alto valor digital
+C0673,69,23079,2,302,Tienda,Occidente,Media,Media,Cliente en riesgo
+C0674,30,13742,13,1975,App,Norte,Media,Alta,Promocional sensible
+C0675,37,41872,15,2938,App,Centro,Alta,Alta,Alto valor digital
+C0676,62,23482,3,719,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0677,32,13417,10,1276,Web,Occidente,Media,Baja,Ocasional presencial
+C0678,18,21340,6,1079,Web,Centro,Baja,Media,Promocional sensible
+C0679,35,20279,2,100,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0680,32,22154,11,2026,Web,Norte,Media,Alta,Promocional sensible
+C0681,42,22229,10,1385,App,Centro,Media,Alta,Promocional sensible
+C0682,39,23626,6,250,Tienda,Sur,Alta,Media,Ocasional presencial
+C0683,28,22591,12,2118,Web,Centro,Alta,Alta,Promocional sensible
+C0684,49,18176,3,1006,Tienda,Occidente,Alta,Baja,Ocasional presencial
+C0685,44,28193,17,1605,App,Occidente,Media,Alta,Promocional sensible
+C0686,40,29010,7,1080,Tienda,Sur,Alta,Media,Ocasional presencial
+C0687,43,53549,14,3023,Tienda,Sur,Media,Media,Alto valor digital
+C0688,33,46960,10,2689,Telefono,Centro,Media,Alta,Alto valor digital
+C0689,36,13050,3,365,Web,Norte,Media,Baja,Cliente en riesgo
+C0690,40,9169,3,618,Tienda,Centro,Alta,Alta,Cliente en riesgo
+C0691,18,30851,7,1090,App,Centro,Alta,Media,Promocional sensible
+C0692,31,28762,3,1149,Web,Centro,Media,Media,Ocasional presencial
+C0693,45,31195,10,2155,Web,Centro,Media,Baja,Promocional sensible
+C0694,30,38027,8,1164,App,Centro,Baja,Media,Promocional sensible
+C0695,23,21120,2,2077,App,Norte,Alta,Alta,Promocional sensible
+C0696,42,48876,14,4338,Web,Occidente,Alta,Alta,Alto valor digital
+C0697,34,33746,6,1522,Telefono,Norte,Media,Alta,Ocasional presencial
+C0698,35,33290,5,934,Tienda,Occidente,Media,Media,Ocasional presencial
+C0699,52,9274,6,790,App,Centro,Baja,Alta,Ocasional presencial
+C0700,43,42163,13,3472,App,Norte,Alta,Alta,Alto valor digital
+C0701,19,16016,9,1659,Tienda,Norte,Media,Alta,Promocional sensible
+C0702,18,25987,1,154,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0703,26,21090,6,1156,Tienda,Centro,Media,Alta,Promocional sensible
+C0704,21,23473,9,1336,Tienda,Centro,Media,Alta,Promocional sensible
+C0705,31,32571,9,975,App,Centro,Media,Alta,Promocional sensible
+C0706,39,15987,4,903,Tienda,Centro,Media,Baja,Ocasional presencial
+C0707,37,16648,2,941,Telefono,Centro,Media,Baja,Ocasional presencial
+C0708,56,20583,1,453,Web,Sur,Baja,Baja,Cliente en riesgo
+C0709,33,44979,16,3161,App,Centro,Alta,Media,Alto valor digital
+C0710,20,35263,21,2438,App,Occidente,Alta,Media,Alto valor digital
+C0711,57,24700,4,1480,App,Occidente,Baja,Alta,Ocasional presencial
+C0712,41,25308,4,689,Tienda,Centro,Alta,Media,Ocasional presencial
+C0713,29,44201,12,3544,App,Norte,Media,Media,Alto valor digital
+C0714,53,26297,3,860,Web,Occidente,Media,Media,Ocasional presencial
+C0715,34,17949,10,675,App,Occidente,Alta,Baja,Promocional sensible
+C0716,35,50538,12,2491,App,Centro,Alta,Media,Alto valor digital
+C0717,35,24108,0,516,Tienda,Norte,Baja,Media,Cliente en riesgo
+C0718,53,24081,1,1204,Tienda,Sur,Media,Media,Ocasional presencial
+C0719,35,40848,21,2588,Web,Norte,Alta,Alta,Alto valor digital
+C0720,28,37425,16,3489,Web,Sur,Alta,Media,Alto valor digital
+C0721,29,19479,4,1572,Web,Sur,Media,Alta,Promocional sensible
+C0722,53,35433,16,4208,App,Centro,Alta,Alta,Alto valor digital
+C0723,54,22374,8,964,Tienda,Occidente,Media,Media,Ocasional presencial
+C0724,26,17857,5,1491,Telefono,Centro,Media,Media,Ocasional presencial
+C0725,36,24022,3,1262,Web,Centro,Baja,Media,Ocasional presencial
+C0726,25,30981,10,945,Web,Occidente,Alta,Alta,Promocional sensible
+C0727,35,7000,5,1041,Tienda,Centro,Baja,Media,Ocasional presencial
+C0728,38,22666,5,750,Tienda,Centro,Media,Media,Ocasional presencial
+C0729,48,27779,8,932,Tienda,Sur,Media,Media,Ocasional presencial
+C0730,36,26153,9,1452,Web,Centro,Media,Alta,Promocional sensible
+C0731,22,29805,3,528,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0732,41,15401,2,603,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0733,56,33423,8,944,Tienda,Centro,Media,Media,Ocasional presencial
+C0734,30,36306,11,697,App,Occidente,Media,Media,Promocional sensible
+C0735,30,18049,4,312,Web,Sur,Media,Baja,Cliente en riesgo
+C0736,54,18542,2,857,Tienda,Centro,Media,Baja,Ocasional presencial
+C0737,35,50711,13,3335,Web,Centro,Media,Media,Alto valor digital
+C0738,41,26091,9,1372,App,Occidente,Media,Alta,Promocional sensible
+C0739,35,21885,7,471,Web,Norte,Alta,Media,Promocional sensible
+C0740,38,54667,12,2514,App,Sur,Media,Alta,Alto valor digital
+C0741,34,21991,12,2092,Tienda,Norte,Media,Alta,Promocional sensible
+C0742,34,25052,2,1147,App,Norte,Media,Alta,Ocasional presencial
+C0743,29,14851,10,1925,App,Occidente,Media,Baja,Promocional sensible
+C0744,48,11184,4,201,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0745,51,45236,11,3302,Web,Centro,Alta,Alta,Alto valor digital
+C0746,54,20774,3,712,Tienda,Occidente,Media,Media,Ocasional presencial
+C0747,48,29116,7,1438,Tienda,Occidente,Baja,Baja,Ocasional presencial
+C0748,32,24384,5,988,Telefono,Centro,Media,Alta,Promocional sensible
+C0749,32,37813,15,4314,App,Norte,Alta,Alta,Alto valor digital
+C0750,36,9497,4,377,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0751,40,23718,9,2035,Web,Norte,Media,Alta,Promocional sensible
+C0752,50,33396,10,4628,App,Norte,Alta,Media,Alto valor digital
+C0753,34,40897,16,3707,App,Occidente,Media,Alta,Alto valor digital
+C0754,18,17452,12,1311,App,Centro,Alta,Alta,Promocional sensible
+C0755,36,29381,5,725,Tienda,Occidente,Baja,Baja,Ocasional presencial
+C0756,38,15528,3,496,App,Norte,Media,Media,Cliente en riesgo
+C0757,35,57115,15,2770,App,Sur,Alta,Alta,Alto valor digital
+C0758,35,47116,16,3204,Web,Centro,Alta,Alta,Alto valor digital
+C0759,49,14872,1,138,App,Occidente,Baja,Baja,Cliente en riesgo
+C0760,45,42686,13,2711,Web,Occidente,Alta,Alta,Alto valor digital
+C0761,33,15686,3,824,Tienda,Sur,Media,Baja,Ocasional presencial
+C0762,42,42633,6,3435,Web,Centro,Alta,Alta,Alto valor digital
+C0763,30,20151,7,1352,Tienda,Norte,Media,Media,Ocasional presencial
+C0764,18,22605,11,1483,Web,Occidente,Alta,Baja,Promocional sensible
+C0765,30,19932,12,1328,Tienda,Centro,Alta,Media,Promocional sensible
+C0766,23,28132,7,1711,Web,Centro,Alta,Alta,Promocional sensible
+C0767,48,16657,1,473,Tienda,Occidente,Media,Baja,Cliente en riesgo
+C0768,33,16707,1,939,Web,Occidente,Media,Media,Cliente en riesgo
+C0769,56,40985,12,2786,Web,Norte,Baja,Alta,Alto valor digital
+C0770,48,20855,5,733,Tienda,Sur,Baja,Baja,Ocasional presencial
+C0771,63,19631,7,418,Tienda,Centro,Baja,Baja,Ocasional presencial
+C0772,38,31423,11,1185,Tienda,Occidente,Media,Media,Promocional sensible
+C0773,33,13571,5,797,Telefono,Centro,Media,Baja,Ocasional presencial
+C0774,36,13104,4,595,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0775,24,19810,7,1618,App,Norte,Media,Media,Promocional sensible
+C0776,20,34315,6,2538,Web,Centro,Alta,Alta,Alto valor digital
+C0777,34,25781,3,100,Telefono,Sur,Baja,Alta,Cliente en riesgo
+C0778,40,42204,11,3763,App,Occidente,Alta,Media,Alto valor digital
+C0779,20,52037,12,3968,Web,Sur,Media,Alta,Alto valor digital
+C0780,33,28406,11,1349,Web,Occidente,Media,Alta,Promocional sensible
+C0781,31,23466,9,852,Web,Centro,Media,Media,Ocasional presencial
+C0782,36,28108,5,2546,Web,Centro,Media,Alta,Promocional sensible
+C0783,28,19447,12,4596,App,Occidente,Alta,Alta,Alto valor digital
+C0784,44,25388,15,4051,Web,Norte,Alta,Alta,Alto valor digital
+C0785,45,16674,4,1546,Tienda,Centro,Media,Alta,Ocasional presencial
+C0786,27,29157,5,572,Web,Centro,Media,Baja,Ocasional presencial
+C0787,30,31218,12,1262,App,Centro,Media,Baja,Promocional sensible
+C0788,28,18050,8,1869,Tienda,Norte,Media,Alta,Promocional sensible
+C0789,27,19885,11,1086,Tienda,Occidente,Baja,Alta,Promocional sensible
+C0790,41,16666,9,841,Tienda,Sur,Alta,Media,Ocasional presencial
+C0791,31,9536,4,327,Web,Norte,Baja,Alta,Cliente en riesgo
+C0792,57,18525,13,1462,App,Occidente,Baja,Alta,Promocional sensible
+C0793,45,20741,8,1599,Tienda,Occidente,Alta,Alta,Promocional sensible
+C0794,40,11471,2,150,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0795,61,12684,7,799,Web,Sur,Baja,Media,Ocasional presencial
+C0796,28,38272,14,3766,App,Centro,Alta,Media,Alto valor digital
+C0797,31,17102,7,1029,Web,Sur,Alta,Alta,Promocional sensible
+C0798,57,7000,5,1191,Tienda,Sur,Media,Baja,Ocasional presencial
+C0799,39,25379,10,863,Tienda,Norte,Media,Media,Ocasional presencial
+C0800,35,31801,12,1333,App,Centro,Alta,Alta,Promocional sensible
+C0801,28,25017,2,427,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0802,45,39156,11,4255,App,Centro,Alta,Alta,Alto valor digital
+C0803,52,32436,6,1022,App,Centro,Media,Baja,Ocasional presencial
+C0804,36,49858,12,1155,Web,Norte,Media,Alta,Promocional sensible
+C0805,28,24558,7,1422,Web,Sur,Media,Media,Promocional sensible
+C0806,27,28574,11,1447,Web,Occidente,Alta,Alta,Promocional sensible
+C0807,19,28969,9,1422,Web,Centro,Alta,Alta,Promocional sensible
+C0808,42,47482,8,4128,App,Norte,Alta,Media,Alto valor digital
+C0809,44,19121,8,1101,Tienda,Centro,Media,Baja,Ocasional presencial
+C0810,37,36952,18,3734,Tienda,Norte,Baja,Alta,Alto valor digital
+C0811,56,18100,1,621,Tienda,Sur,Baja,Media,Cliente en riesgo
+C0812,49,17128,4,304,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0813,31,16169,1,1130,Web,Centro,Alta,Alta,Ocasional presencial
+C0814,62,25473,3,760,Tienda,Centro,Baja,Baja,Ocasional presencial
+C0815,41,35407,11,1161,Web,Norte,Media,Alta,Promocional sensible
+C0816,29,10232,2,690,Tienda,Sur,Baja,Alta,Cliente en riesgo
+C0817,31,22392,13,1401,Web,Centro,Baja,Alta,Promocional sensible
+C0818,51,28352,5,1337,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0819,52,56976,17,2386,App,Norte,Alta,Alta,Alto valor digital
+C0820,33,20990,4,664,Tienda,Sur,Media,Media,Cliente en riesgo
+C0821,41,9599,4,259,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0822,33,41306,14,2089,Tienda,Centro,Alta,Alta,Alto valor digital
+C0823,42,50989,8,3682,Web,Occidente,Alta,Alta,Alto valor digital
+C0824,38,27922,15,2994,Web,Norte,Alta,Alta,Alto valor digital
+C0825,36,26668,4,1298,Telefono,Norte,Media,Alta,Promocional sensible
+C0826,30,8000,10,889,App,Norte,Baja,Media,Promocional sensible
+C0827,23,22068,3,1084,App,Norte,Media,Alta,Promocional sensible
+C0828,48,30413,7,2003,App,Norte,Media,Media,Alto valor digital
+C0829,29,21122,2,1337,App,Norte,Media,Media,Ocasional presencial
+C0830,38,34880,10,1485,Web,Centro,Media,Alta,Promocional sensible
+C0831,31,32407,13,1504,Telefono,Occidente,Alta,Alta,Promocional sensible
+C0832,29,14178,1,303,Tienda,Sur,Baja,Alta,Ocasional presencial
+C0833,37,21119,2,1410,Telefono,Occidente,Media,Alta,Ocasional presencial
+C0834,46,34729,5,250,Telefono,Sur,Media,Alta,Ocasional presencial
+C0835,25,7457,3,307,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0836,43,30360,11,3437,App,Occidente,Alta,Baja,Alto valor digital
+C0837,40,15689,2,649,Tienda,Norte,Baja,Baja,Cliente en riesgo
+C0838,47,21921,2,469,Telefono,Occidente,Baja,Baja,Cliente en riesgo
+C0839,38,32918,12,2309,Web,Norte,Alta,Media,Alto valor digital
+C0840,40,23282,12,400,Web,Occidente,Baja,Alta,Promocional sensible
+C0841,34,46940,15,3769,Web,Centro,Alta,Media,Alto valor digital
+C0842,36,22852,8,1375,Tienda,Centro,Alta,Alta,Promocional sensible
+C0843,30,14785,1,521,Tienda,Sur,Baja,Alta,Cliente en riesgo
+C0844,30,32615,14,3379,Web,Occidente,Media,Media,Alto valor digital
+C0845,44,55298,12,4474,Tienda,Norte,Alta,Media,Alto valor digital
+C0846,25,22124,4,348,Tienda,Centro,Media,Baja,Ocasional presencial
+C0847,28,14109,11,1170,Tienda,Sur,Media,Alta,Promocional sensible
+C0848,58,22649,4,773,Tienda,Centro,Media,Baja,Ocasional presencial
+C0849,26,28176,11,1074,Tienda,Centro,Alta,Alta,Promocional sensible
+C0850,38,38030,17,3544,App,Occidente,Alta,Alta,Alto valor digital
+C0851,46,27426,2,1811,Web,Centro,Media,Alta,Promocional sensible
+C0852,45,27429,2,547,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0853,26,32397,4,1943,Web,Sur,Alta,Alta,Promocional sensible
+C0854,32,18755,5,2206,App,Centro,Media,Alta,Promocional sensible
+C0855,39,16178,3,100,App,Occidente,Media,Baja,Cliente en riesgo
+C0856,50,26115,4,967,Telefono,Occidente,Media,Media,Ocasional presencial
+C0857,47,31952,11,3434,Web,Occidente,Alta,Alta,Alto valor digital
+C0858,48,18504,3,1207,Web,Centro,Media,Baja,Ocasional presencial
+C0859,31,32083,14,1519,Web,Centro,Alta,Alta,Promocional sensible
+C0860,32,44463,12,3623,App,Centro,Alta,Alta,Alto valor digital
+C0861,29,20118,6,1660,App,Norte,Alta,Media,Promocional sensible
+C0862,37,28959,9,816,Tienda,Centro,Media,Baja,Ocasional presencial
+C0863,42,14503,2,549,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0864,30,24434,2,1366,Web,Centro,Media,Alta,Promocional sensible
+C0865,18,24257,16,1144,App,Occidente,Alta,Alta,Promocional sensible
+C0866,45,30124,4,703,Telefono,Centro,Media,Baja,Ocasional presencial
+C0867,41,44209,15,3574,App,Occidente,Alta,Alta,Alto valor digital
+C0868,40,23147,5,1143,Tienda,Centro,Media,Baja,Ocasional presencial
+C0869,39,6578,3,100,Telefono,Occidente,Baja,Baja,Cliente en riesgo
+C0870,56,19144,5,849,Tienda,Occidente,Media,Alta,Ocasional presencial
+C0871,30,44668,15,3442,App,Norte,Alta,Media,Alto valor digital
+C0872,27,12919,11,1206,App,Norte,Alta,Alta,Promocional sensible
+C0873,64,50137,17,2610,App,Centro,Alta,Media,Alto valor digital
+C0874,40,24499,3,834,Tienda,Sur,Media,Baja,Ocasional presencial
+C0875,41,14367,4,494,Web,Sur,Baja,Baja,Cliente en riesgo
+C0876,18,37433,12,1439,Web,Norte,Alta,Media,Promocional sensible
+C0877,40,40531,13,3949,Telefono,Sur,Alta,Baja,Alto valor digital
+C0878,33,28290,17,2232,App,Occidente,Media,Media,Promocional sensible
+C0879,40,40698,11,3588,App,Norte,Alta,Alta,Alto valor digital
+C0880,45,46391,13,2694,App,Centro,Alta,Alta,Alto valor digital
+C0881,58,36311,13,4802,App,Centro,Alta,Baja,Alto valor digital
+C0882,26,10340,2,674,App,Centro,Media,Baja,Cliente en riesgo
+C0883,23,24419,9,1953,Web,Centro,Alta,Alta,Promocional sensible
+C0884,32,32490,6,796,App,Sur,Media,Alta,Promocional sensible
+C0885,49,20751,3,206,Telefono,Centro,Baja,Baja,Cliente en riesgo
+C0886,45,24562,7,1183,Tienda,Sur,Media,Media,Ocasional presencial
+C0887,40,32193,1,788,App,Sur,Media,Media,Ocasional presencial
+C0888,26,31037,6,1350,Web,Centro,Media,Media,Promocional sensible
+C0889,18,21088,16,1687,App,Centro,Baja,Alta,Promocional sensible
+C0890,33,35203,11,2966,Telefono,Norte,Alta,Media,Alto valor digital
+C0891,20,27538,4,1458,Web,Centro,Media,Alta,Promocional sensible
+C0892,30,38681,18,3143,App,Centro,Alta,Alta,Alto valor digital
+C0893,40,13668,9,1859,Tienda,Centro,Baja,Alta,Promocional sensible
+C0894,50,36306,8,1562,App,Centro,Media,Media,Promocional sensible
+C0895,28,18650,8,1661,Web,Centro,Media,Media,Promocional sensible
+C0896,75,17110,5,923,Tienda,Norte,Media,Baja,Ocasional presencial
+C0897,58,30954,7,890,Tienda,Centro,Media,Alta,Ocasional presencial
+C0898,40,62180,12,4646,Web,Norte,Alta,Media,Alto valor digital
+C0899,26,20562,3,2358,Tienda,Centro,Media,Alta,Promocional sensible
+C0900,63,25732,2,376,Telefono,Centro,Media,Baja,Cliente en riesgo
+C0901,23,25615,13,1351,App,Occidente,Media,Alta,Promocional sensible
+C0902,33,17510,2,462,Web,Sur,Baja,Baja,Cliente en riesgo
+C0903,35,29261,10,1021,Tienda,Occidente,Baja,Media,Promocional sensible
+C0904,48,29780,5,1482,Tienda,Sur,Baja,Alta,Ocasional presencial
+C0905,37,11603,0,422,Web,Occidente,Baja,Media,Cliente en riesgo
+C0906,28,21376,16,2058,Web,Centro,Media,Media,Promocional sensible
+C0907,60,10729,4,704,Web,Sur,Alta,Alta,Ocasional presencial
+C0908,47,16555,3,956,Tienda,Centro,Baja,Baja,Cliente en riesgo
+C0909,51,13401,8,1519,Tienda,Norte,Media,Baja,Ocasional presencial
+C0910,42,37733,13,1742,App,Occidente,Media,Alta,Promocional sensible
+C0911,41,7906,3,852,App,Centro,Baja,Baja,Cliente en riesgo
+C0912,31,45205,14,4971,App,Norte,Alta,Alta,Alto valor digital
+C0913,33,23729,7,899,Tienda,Centro,Baja,Baja,Ocasional presencial
+C0914,26,28069,7,1765,Telefono,Occidente,Baja,Alta,Promocional sensible
+C0915,49,21415,2,821,Web,Centro,Alta,Baja,Ocasional presencial
+C0916,26,32610,19,2285,App,Centro,Alta,Alta,Alto valor digital
+C0917,27,27469,14,2820,Web,Norte,Alta,Alta,Alto valor digital
+C0918,29,15879,8,1318,App,Centro,Media,Alta,Promocional sensible
+C0919,40,26185,5,553,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0920,45,20532,5,732,Tienda,Sur,Media,Baja,Ocasional presencial
+C0921,51,26568,5,486,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0922,50,28192,12,3327,App,Sur,Alta,Alta,Alto valor digital
+C0923,28,13158,0,211,Web,Sur,Baja,Media,Cliente en riesgo
+C0924,36,18508,10,1475,Tienda,Occidente,Alta,Media,Promocional sensible
+C0925,52,14657,8,267,Web,Sur,Media,Media,Ocasional presencial
+C0926,54,20022,7,790,Tienda,Centro,Alta,Media,Ocasional presencial
+C0927,41,16221,3,1935,Web,Centro,Media,Baja,Ocasional presencial
+C0928,33,9517,2,498,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0929,27,12649,1,775,Tienda,Sur,Media,Baja,Cliente en riesgo
+C0930,46,52296,11,2614,Web,Occidente,Alta,Media,Alto valor digital
+C0931,18,32510,13,1024,Web,Centro,Media,Alta,Promocional sensible
+C0932,63,29796,7,893,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0933,32,30912,3,1304,Tienda,Norte,Media,Alta,Ocasional presencial
+C0934,26,23002,13,1727,App,Sur,Media,Alta,Promocional sensible
+C0935,19,26767,10,1859,App,Norte,Media,Alta,Promocional sensible
+C0936,32,22016,3,1301,Tienda,Norte,Baja,Baja,Ocasional presencial
+C0937,32,20576,12,1286,Web,Centro,Media,Alta,Promocional sensible
+C0938,74,19366,6,619,App,Occidente,Baja,Media,Ocasional presencial
+C0939,48,9211,3,687,App,Sur,Baja,Baja,Cliente en riesgo
+C0940,36,35447,8,1210,Tienda,Sur,Media,Alta,Promocional sensible
+C0941,47,25988,5,507,Tienda,Centro,Media,Media,Ocasional presencial
+C0942,26,17046,3,1277,Tienda,Occidente,Media,Baja,Ocasional presencial
+C0943,38,46691,11,3347,Tienda,Occidente,Alta,Alta,Alto valor digital
+C0944,36,28687,6,913,App,Centro,Baja,Media,Promocional sensible
+C0945,35,26866,10,1385,Web,Occidente,Baja,Media,Promocional sensible
+C0946,26,22822,4,1276,Web,Centro,Alta,Baja,Promocional sensible
+C0947,31,24264,11,1495,App,Sur,Media,Baja,Promocional sensible
+C0948,27,36592,17,4010,Web,Centro,Alta,Baja,Alto valor digital
+C0949,48,17562,3,541,App,Norte,Baja,Baja,Cliente en riesgo
+C0950,27,29067,10,1667,Tienda,Centro,Alta,Media,Promocional sensible
+C0951,28,14616,6,1514,Web,Centro,Alta,Alta,Promocional sensible
+C0952,48,30837,4,774,Tienda,Centro,Alta,Alta,Ocasional presencial
+C0953,27,16786,0,383,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0954,41,15462,4,160,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0955,18,38696,7,682,Web,Sur,Media,Alta,Promocional sensible
+C0956,38,17979,12,1283,Tienda,Centro,Media,Alta,Promocional sensible
+C0957,23,5107,3,420,Telefono,Sur,Baja,Baja,Cliente en riesgo
+C0958,23,13602,1,670,Tienda,Occidente,Media,Alta,Cliente en riesgo
+C0959,24,35895,6,1278,Telefono,Centro,Media,Alta,Promocional sensible
+C0960,28,42536,18,3681,Web,Centro,Alta,Media,Alto valor digital
+C0961,28,35104,8,1858,App,Norte,Baja,Alta,Promocional sensible
+C0962,44,24235,1,864,Web,Sur,Media,Media,Ocasional presencial
+C0963,45,15956,6,795,Telefono,Centro,Media,Alta,Ocasional presencial
+C0964,33,45715,9,3489,App,Norte,Alta,Alta,Alto valor digital
+C0965,46,17342,7,1144,Web,Occidente,Alta,Media,Ocasional presencial
+C0966,23,22811,7,1884,Web,Centro,Media,Alta,Promocional sensible
+C0967,30,36583,5,1975,Tienda,Sur,Alta,Baja,Ocasional presencial
+C0968,56,22902,5,1483,App,Centro,Alta,Baja,Ocasional presencial
+C0969,30,41742,16,876,Web,Sur,Baja,Baja,Promocional sensible
+C0970,29,25692,9,819,Web,Occidente,Media,Media,Promocional sensible
+C0971,27,24063,4,1168,App,Sur,Media,Alta,Ocasional presencial
+C0972,41,24449,3,868,Tienda,Sur,Baja,Media,Ocasional presencial
+C0973,18,16891,3,394,Tienda,Sur,Baja,Baja,Cliente en riesgo
+C0974,43,29673,5,2274,App,Centro,Media,Baja,Promocional sensible
+C0975,32,38042,15,2745,App,Sur,Alta,Alta,Alto valor digital
+C0976,40,19859,3,661,Web,Occidente,Baja,Baja,Cliente en riesgo
+C0977,28,23897,8,1706,App,Norte,Media,Alta,Promocional sensible
+C0978,36,29572,8,955,Tienda,Occidente,Media,Media,Promocional sensible
+C0979,20,35431,10,989,Web,Occidente,Baja,Alta,Promocional sensible
+C0980,44,54754,15,3451,App,Norte,Alta,Baja,Alto valor digital
+C0981,49,17852,8,891,Telefono,Occidente,Alta,Media,Ocasional presencial
+C0982,40,18203,10,1782,Web,Centro,Baja,Alta,Promocional sensible
+C0983,23,49497,14,2293,App,Centro,Alta,Alta,Alto valor digital
+C0984,35,49072,18,3388,App,Centro,Alta,Alta,Alto valor digital
+C0985,23,21978,9,1338,Tienda,Occidente,Alta,Alta,Promocional sensible
+C0986,65,19376,4,1421,Tienda,Occidente,Alta,Media,Ocasional presencial
+C0987,61,27638,6,1043,Tienda,Occidente,Media,Media,Ocasional presencial
+C0988,36,19934,8,797,App,Centro,Media,Alta,Promocional sensible
+C0989,44,42774,19,3502,App,Centro,Alta,Baja,Alto valor digital
+C0990,43,16344,6,1513,App,Centro,Media,Media,Promocional sensible
+C0991,36,14137,4,744,Tienda,Occidente,Media,Media,Ocasional presencial
+C0992,27,41261,13,3978,Tienda,Occidente,Media,Alta,Alto valor digital
+C0993,35,20632,9,400,App,Centro,Baja,Alta,Promocional sensible
+C0994,30,27419,6,1318,Tienda,Centro,Media,Alta,Promocional sensible
+C0995,42,24809,2,183,Telefono,Occidente,Baja,Baja,Cliente en riesgo
+C0996,47,49053,18,2887,App,Norte,Alta,Media,Alto valor digital
+C0997,26,48145,20,3198,Web,Norte,Media,Media,Alto valor digital
+C0998,41,13439,5,1078,Tienda,Sur,Media,Media,Ocasional presencial
+C0999,39,12892,2,817,Tienda,Norte,Baja,Media,Cliente en riesgo
+C1000,26,20206,5,1549,Tienda,Occidente,Media,Baja,Ocasional presencial
